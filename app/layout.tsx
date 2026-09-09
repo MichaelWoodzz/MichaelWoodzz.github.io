@@ -4,7 +4,7 @@ import './globals.css';
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Vantage',
-  description: 'Dating and personal consulting for men. Build confidence, connect with intention, and find a clearer personal direction with Vantage.',
+  description: 'Private personal and dating advisory for men in Los Angeles. Individual strategies, hair, skin and physique expertise, and access to a connected LA network.',
   icons: { icon: '/favicon.svg' },
 };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
