@@ -7,7 +7,7 @@ const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: 'Vantage SoCal | Private Dating Consultant for Men in Southern California',
-  description: 'Private dating and personal advisory for men across Los Angeles, Orange County, and Ventura County. Improve your appearance, confidence, social life, and dating strategy with a plan built around you.',
+  description: 'Private dating, social, and lifestyle advisory for accomplished men across Los Angeles, Orange County, and Ventura County. Appearance, confidence, network, digital presence, and hands-on real-world support.',
   applicationName: 'Vantage SoCal',
   category: 'Private personal and dating advisory',
   alternates: { canonical: '/' },
@@ -17,12 +17,12 @@ export const metadata: Metadata = {
     url: '/',
     siteName: 'Vantage SoCal',
     title: 'Vantage SoCal | Private Dating Consultant for Men in Southern California',
-    description: 'Personal dating strategy, appearance and confidence guidance, and specialist access across Los Angeles, Orange County, and Ventura County.',
+    description: 'A discreet, high-touch advisory for accomplished men spanning appearance, dating, social life, digital presence, specialist access, and real-world support.',
   },
   twitter: {
     card: 'summary',
     title: 'Vantage SoCal | Private Dating Consultant for Men in Southern California',
-    description: 'Private dating and personal advisory for men across Los Angeles, Orange County, and Ventura County.',
+    description: 'Private dating, social, and lifestyle advisory for accomplished men across Southern California.',
   },
   robots: {
     index: true,

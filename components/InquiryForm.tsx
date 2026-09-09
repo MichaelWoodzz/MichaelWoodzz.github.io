@@ -6,18 +6,21 @@ import { ArrowUpRight, ArrowLeft } from 'lucide-react';
 const AREA_OPTIONS = ['Los Angeles', 'Orange County', 'Ventura County', 'Other Southern California'];
 
 const SITUATION_OPTIONS = [
-  'Newly single',
-  'Ready for a change in my dating life',
-  'New to the area',
-  'Getting back out there after a while',
-  'Something else',
+  'My personal life has not kept pace with my career',
+  'I want to improve my appearance and presence',
+  'I need a stronger social circle and lifestyle',
+  'Dating apps and my current strategy are not working',
+  'I am navigating a major life transition',
+  'I want a comprehensive assessment',
 ];
 
 const FOCUS_OPTIONS = [
-  'Appearance & presence',
-  'Dating & social strategy',
-  'Network & access to specialists',
-  'Not sure yet — help me figure it out',
+  'Appearance, physique, grooming & style',
+  'Dating strategy, confidence & communication',
+  'Social circle, lifestyle & organic introductions',
+  'Hands-on outings & real-time support',
+  'Private events & hosting',
+  'The full advisory — help me set priorities',
 ];
 
 const TOTAL_STEPS = 6;
@@ -62,7 +65,7 @@ export function InquiryForm() {
     .join('\n');
 
   const mailtoHref = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
-    `New inquiry from ${data.name || 'the Vantage SoCal site'}`,
+    `Private advisory application from ${data.name || 'the Vantage SoCal site'}`,
   )}&body=${encodeURIComponent(emailBody)}`;
 
   return (
@@ -75,7 +78,7 @@ export function InquiryForm() {
 
       {step === 1 && (
         <div className="inquiry-step">
-          <p className="inquiry-question">First, how should we reach you?</p>
+          <p className="inquiry-question">Apply for Private Advisory</p>
           <div className="inquiry-fields">
             <input
               className="inquiry-input"
@@ -174,7 +177,7 @@ export function InquiryForm() {
 
       {step === 6 && (
         <div className="inquiry-step">
-          <p className="inquiry-question">Ready to send?</p>
+          <p className="inquiry-question">Review your private application.</p>
           <dl className="inquiry-summary">
             <div>
               <dt>Name</dt>
@@ -204,7 +207,7 @@ export function InquiryForm() {
             )}
           </dl>
           <a className="primary-link inquiry-next" href={mailtoHref}>
-            Send inquiry <ArrowUpRight size={18} aria-hidden="true" />
+            Apply for Private Advisory <ArrowUpRight size={18} aria-hidden="true" />
           </a>
           <p className="inquiry-hint">This opens your email app with everything filled in — just hit send.</p>
         </div>
