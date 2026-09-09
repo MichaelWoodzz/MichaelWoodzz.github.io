@@ -71,15 +71,6 @@ export default function Home() {
           </figure>
         </section>
 
-        <section className="application-section section-shell" id="apply" aria-labelledby="apply-title">
-          <div className="application-intro">
-            <p className="eyebrow">Apply for private advisory</p>
-            <h2 id="apply-title">Tell me what you want<br /><em>your life to look like.</em></h2>
-            <p>Every situation is different. This short application helps me understand where you are, what you want, and how involved you would like me to be.</p>
-          </div>
-          <InquiryForm />
-        </section>
-
         <section className="approach section-shell" id="advisory" aria-labelledby="approach-title">
           <p className="eyebrow section-label">01 / The difference</p>
           <div className="approach-copy">
@@ -127,12 +118,18 @@ export default function Home() {
             <article><h3>Is it private?</h3><p>Yes. I work discreetly with a limited number of clients. Introductions, outings, specialists, and events are handled with care and good judgment.</p></article>
           </div>
         </section>
-        <section className="closing section-shell" aria-labelledby="closing-title">
-          <div className="closing-intro"><p className="eyebrow">Private client applications</p><h2 id="closing-title">Ready for a better<br /><em>personal life?</em></h2><p className="closing-copy">Tell me where you are and where you want to go.</p></div>
-          <a className="primary-link" href="#apply">Start your application <ArrowUpRight size={20} aria-hidden="true" /></a>
+
+        <section className="application-section section-shell" id="apply" aria-labelledby="apply-title">
+          <div className="application-intro">
+            <p className="eyebrow">Apply for private advisory</p>
+            <h2 id="apply-title">Tell me what you want<br /><em>your life to look like.</em></h2>
+            <p>Every situation is different. This short application helps me understand where you are, what you want, and how involved you would like me to be.</p>
+          </div>
+          <InquiryForm />
         </section>
       </main>
 
+      <a className="floating-apply" href="#apply">Apply for Private Advisory <ArrowUpRight size={17} aria-hidden="true" /></a>
       <footer className="site-footer"><Link className="wordmark" href="/" aria-label="Vantage SoCal home">vantage socal<span>.</span></Link><p>Los Angeles · Orange County · Ventura County</p><span>© {new Date().getFullYear()} Vantage SoCal</span></footer>
     </>
   );
