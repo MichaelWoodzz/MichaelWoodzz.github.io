@@ -4,8 +4,36 @@ import './globals.css';
 import { GoogleAnalytics } from './google-analytics';
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
 export const metadata: Metadata = {
-  title: 'Vantage',
-  description: 'Private personal and dating advisory for men across all of Los Angeles, Orange County, and Ventura County. Individual strategies, specialist expertise, and a connected network.',
+  metadataBase: new URL('https://vantage.upgradevillage.chatgpt.site'),
+  title: 'Vantage | Private Dating Consultant for Men in Los Angeles',
+  description: 'Private dating and personal advisory for men across Los Angeles, Orange County, and Ventura County. Improve your appearance, confidence, social life, and dating strategy with a plan built around you.',
+  applicationName: 'Vantage',
+  category: 'Private personal and dating advisory',
+  alternates: { canonical: '/' },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: '/',
+    siteName: 'Vantage',
+    title: 'Vantage | Private Dating Consultant for Men in Los Angeles',
+    description: 'Personal dating strategy, appearance and confidence guidance, and specialist access across Los Angeles, Orange County, and Ventura County.',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Vantage | Private Dating Consultant for Men in Los Angeles',
+    description: 'Private dating and personal advisory for men across Los Angeles, Orange County, and Ventura County.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
   icons: { icon: '/favicon.svg' },
 };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
