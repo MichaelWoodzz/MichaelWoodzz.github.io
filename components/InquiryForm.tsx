@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { SyntheticEvent } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 
@@ -42,6 +42,21 @@ const initialState: FormState = {
 export function InquiryForm() {
   const [data, setData] = useState<FormState>(initialState);
 
+  useEffect(() => {
+    try {
+      if (!sessionStorage.getItem('vantage-first-touch')) {
+        const params = new URLSearchParams(window.location.search);
+        sessionStorage.setItem('vantage-first-touch', JSON.stringify({
+          landingPage: window.location.href,
+          referrer: document.referrer || 'Direct / unknown',
+          source: params.get('utm_source') || 'Not supplied',
+          medium: params.get('utm_medium') || 'Not supplied',
+          campaign: params.get('utm_campaign') || 'Not supplied',
+        }));
+      }
+    } catch { /* The application still works when storage is unavailable. */ }
+  }, []);
+
   const update = (field: keyof FormState, value: string) => {
     setData((previous) => ({ ...previous, [field]: value }));
   };
@@ -57,6 +72,18 @@ export function InquiryForm() {
 
   const handleSubmit = (event: SyntheticEvent<HTMLFormElement>) => {
     event.preventDefault();
+    const params = new URLSearchParams(window.location.search);
+    let sourceDetails = {
+      landingPage: window.location.href,
+      referrer: document.referrer || 'Direct / unknown',
+      source: params.get('utm_source') || 'Not supplied',
+      medium: params.get('utm_medium') || 'Not supplied',
+      campaign: params.get('utm_campaign') || 'Not supplied',
+    };
+    try {
+      const saved = sessionStorage.getItem('vantage-first-touch');
+      if (saved) sourceDetails = { ...sourceDetails, ...JSON.parse(saved) };
+    } catch { /* Use the current page details. */ }
     const emailBody = [
       `Full name: ${data.name}`,
       `Email: ${data.email}`,
@@ -66,6 +93,12 @@ export function InquiryForm() {
       `What they want to improve: ${data.improvements}`,
       `What they are looking for: ${data.lookingFor}`,
       `Anything else: ${data.anythingElse || 'No additional notes'}`,
+      '--- Inquiry source ---',
+      `Landing page: ${sourceDetails.landingPage}`,
+      `Referrer: ${sourceDetails.referrer}`,
+      `UTM source: ${sourceDetails.source}`,
+      `UTM medium: ${sourceDetails.medium}`,
+      `UTM campaign: ${sourceDetails.campaign}`,
     ].join('\n\n');
 
     window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
@@ -130,6 +163,7 @@ export function InquiryForm() {
         Apply for Private Advisory <ArrowUpRight size={18} aria-hidden="true" />
       </button>
       <p className="inquiry-hint">This opens your email app with your private application ready to send.</p>
+      <p className="inquiry-email-fallback">Prefer to write directly? <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></p>
     </form>
   );
 }

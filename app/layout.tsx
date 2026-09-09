@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   creator: 'Vantage',
   publisher: 'Vantage',
   category: 'Private personal and dating advisory',
+  keywords: ['private dating advisor Los Angeles', 'dating coach for successful men', 'private wingman Los Angeles', 'men’s image consultant Los Angeles', 'social life consultant Los Angeles', 'dating profile consultant Los Angeles'],
   alternates: { canonical: '/' },
   openGraph: {
     type: 'website',

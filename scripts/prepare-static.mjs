@@ -9,6 +9,7 @@ const pages = [
   ['/about/', '0.8'],
   ['/how-it-works/', '0.85'],
   ['/private-dating-advisor-los-angeles/', '0.9'],
+  ['/dating-coach-vs-matchmaker-los-angeles/', '0.85'],
   ['/mens-image-consulting-los-angeles/', '0.85'],
   ['/social-life-consulting-los-angeles/', '0.9'],
   ['/private-wingman-los-angeles/', '0.9'],

@@ -84,6 +84,7 @@ export default function Home() {
         <section className="hero" aria-labelledby="hero-title">
           <div className="hero-copy">
             <p className="eyebrow"><span className="small-rule" /> The ultimate private wingman</p>
+            <p className="availability"><span aria-hidden="true" /> Now accepting private client applications</p>
             <h1 id="hero-title">Look your absolute best.<br /><em>Build an amazing social life.</em></h1>
             <p className="hero-description">I help you look your best, meet more people, build a great social life, and become more confident—with the support of a well-connected friend beside you.</p>
             <a className="primary-link" href="#apply">Apply for Private Advisory <ArrowUpRight size={20} aria-hidden="true" /></a>
@@ -139,6 +140,8 @@ export default function Home() {
             <article><h3>What exactly do you do?</h3><p>I help you look your best, improve your confidence, strengthen your dating profiles, build your social circle, find better places to go, join you on outings, and throw events that bring people together.</p></article>
             <article><h3>Is this matchmaking?</h3><p>No. I do not sell introductions or arrange dates from a database. I help you build a better life and social world, then use my network when a natural, appropriate opportunity arises.</p></article>
             <article><h3>What makes it different?</h3><p>The relationship is personal and hands-on. I act more like a trusted, well-connected friend than a conventional coach. There is no fixed course because every client needs something different.</p></article>
+            <article><h3>I am successful, but my dating and social life are behind. Can you help?</h3><p>That is exactly who Vantage is built for. We identify the few changes with the highest impact, then help you execute them across appearance, dating, friendships, venues, events, and your weekly life.</p></article>
+            <article><h3>Should I hire a dating coach, a matchmaker, or Vantage?</h3><p>A coach usually focuses on skills, while a matchmaker focuses on introductions. Vantage works on the full picture and can be beside you in real life. <Link className="inline-link" href="/dating-coach-vs-matchmaker-los-angeles/">Compare the options</Link>.</p></article>
             <article><h3>Is it private?</h3><p>Yes. I work discreetly with a limited number of clients. Introductions, outings, specialists, and events are handled with care and good judgment.</p></article>
           </div>
         </section>
@@ -148,6 +151,7 @@ export default function Home() {
             <p className="eyebrow">Apply for private advisory</p>
             <h2 id="apply-title">Tell me what you want<br /><em>your life to look like.</em></h2>
             <p>Every situation is different. This short application helps me understand where you are, what you want, and how involved you would like me to be.</p>
+            <p className="application-availability">Applications are currently open for Los Angeles, Orange County, and Ventura County.</p>
           </div>
           <InquiryForm />
         </section>
