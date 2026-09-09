@@ -8,14 +8,14 @@ const structuredData = {
       '@type': 'WebSite',
       '@id': `${siteUrl}/#website`,
       url: siteUrl,
-      name: 'Vantage LA',
+      name: 'Vantage SoCal',
       description: 'Private dating and personal advisory for men in Southern California.',
       inLanguage: 'en-US',
     },
     {
       '@type': 'Organization',
       '@id': `${siteUrl}/#organization`,
-      name: 'Vantage LA',
+      name: 'Vantage SoCal',
       url: siteUrl,
       description: 'Private personal and dating advisory for men across Los Angeles, Orange County, and Ventura County.',
       areaServed: [
@@ -48,7 +48,7 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, '\\u003c') }} />
       <a className="skip-link" href="#main">Skip to content</a>
       <header className="site-header">
-        <a className="wordmark" href="#" aria-label="Vantage LA home">vantage la<span>.</span></a>
+        <a className="wordmark" href="#" aria-label="Vantage SoCal home">vantage socal<span>.</span></a>
         <nav aria-label="Main navigation"><a href="#approach">The approach</a><a href="#los-angeles">Our locations</a><a href="#consulting">The offer <ArrowUpRight size={15} aria-hidden="true" /></a></nav>
       </header>
       <main id="main">
@@ -57,11 +57,11 @@ export default function Home() {
             <p className="eyebrow"><span className="small-rule" /> Private dating consultant for men · Southern California</p>
             <h1 id="hero-title">A better<br />perspective.<br /><em>A stronger you.</em></h1>
             <p className="hero-description">Your appearance. Your social circle. Your dating life. A personal strategy, specialist expertise, and a connected local network—built around you and the women you want to meet.</p>
-            <a className="primary-link" href="#consulting">Explore the Vantage LA offer <ArrowUpRight size={20} aria-hidden="true" /></a>
+            <a className="primary-link" href="#consulting">Explore the Vantage SoCal offer <ArrowUpRight size={20} aria-hidden="true" /></a>
             <div className="hero-bottom"><span>Los Angeles · Orange County · Ventura County</span><a href="#consulting" aria-label="Explore consulting services"><ArrowDown size={20} aria-hidden="true" /></a></div>
           </div>
           <figure className="hero-image">
-            <img src={publicAsset('/vantage-coastal-hero.webp')} alt="A man looking over the Southern California coast, representing Vantage LA private dating consulting" width="1536" height="1024" fetchPriority="high" decoding="async" />
+            <img src={publicAsset('/vantage-coastal-hero.webp')} alt="A man looking over the Southern California coast, representing Vantage SoCal private dating consulting" width="1536" height="1024" fetchPriority="high" decoding="async" />
             <figcaption><span>A new point of view.</span><span>V / 01</span></figcaption>
           </figure>
         </section>
@@ -73,7 +73,7 @@ export default function Home() {
           </div>
         </section>
         <section className="consulting section-shell" id="consulting" aria-labelledby="consulting-title">
-          <div className="section-heading"><p className="eyebrow">02 / The Vantage LA offer</p><h2 id="consulting-title">The whole picture.<br /><em>A plan that connects it.</em></h2><p>Personal advisory that brings together how you look, how you connect, and where you spend your time.</p></div>
+          <div className="section-heading"><p className="eyebrow">02 / The Vantage SoCal offer</p><h2 id="consulting-title">The whole picture.<br /><em>A plan that connects it.</em></h2><p>Personal advisory that brings together how you look, how you connect, and where you spend your time.</p></div>
           <div className="services">
             <article className="service"><span className="service-number">01</span><h3>Appearance & presence</h3><p>Work with our network of cosmetic, grooming, and physique experts to refine your presentation. Hair, skin, fitness, wardrobe, and the way you carry yourself all become part of one considered direction.</p><span className="service-topics">Hair · Skin · Physique · Personal style</span></article>
             <article className="service"><span className="service-number">02</span><h3>Dating & social strategy</h3><p>Align your photos, profile, communication, and social life with the women you’re interested in meeting. Get honest feedback on first impressions, conversation, and how you build a connection beyond the first date.</p><span className="service-topics">Positioning · Profiles · Conversation</span></article>
@@ -101,19 +101,19 @@ export default function Home() {
           <div className="services"><article className="service"><span className="service-number">01 / Understand</span><h3>Start with your situation.</h3><p>Look at your current dating life, appearance, confidence, social circle, and preferences. Define the women you want to meet and where across Los Angeles, Orange County, or Ventura County you want to focus.</p></article><article className="service"><span className="service-number">02 / Coordinate</span><h3>Bring the right people in.</h3><p>Set clear priorities and connect you with the relevant experts and network. Build a practical direction for your presentation, dating approach, and social life.</p></article><article className="service"><span className="service-number">03 / Refine</span><h3>Put the plan into practice.</h3><p>Use real experiences and honest feedback to refine your approach. As your confidence, circumstances, and goals evolve, your strategy evolves with them.</p></article></div>
         </section>
         <section className="faq section-shell" aria-labelledby="faq-title">
-          <div className="section-heading"><p className="eyebrow">07 / Questions</p><h2 id="faq-title">What to know<br /><em>about Vantage LA.</em></h2><p>Clear answers about our private dating and personal advisory service for men.</p></div>
+          <div className="section-heading"><p className="eyebrow">07 / Questions</p><h2 id="faq-title">What to know<br /><em>about Vantage SoCal.</em></h2><p>Clear answers about our private dating and personal advisory service for men.</p></div>
           <div className="faq-list">
-            <article><h3>What does a private dating consultant help with?</h3><p>Vantage LA looks at the full picture: dating strategy, profiles and photos, communication, confidence, social opportunities, and personal presentation. When relevant, we also coordinate expertise in hair, skin, cosmetics, physique, and style.</p></article>
-            <article><h3>Is every Vantage LA plan personalized?</h3><p>Yes. Every client begins with a different situation, lifestyle, dating history, and goal. We identify the changes most likely to matter for you and bring in the right specialists and opportunities for that plan.</p></article>
-            <article><h3>Where does Vantage LA work with clients?</h3><p>We serve men throughout Los Angeles County, Orange County, and Ventura County. Your strategy can focus on a particular neighborhood, county, or wider Southern California social circle.</p></article>
-            <article><h3>Can Vantage LA help me meet the kind of women I’m interested in?</h3><p>We clarify the adult women you hope to meet by life stage, interests, values, and lifestyle. That understanding guides your positioning and the communities, settings, and social opportunities where you are most likely to make an authentic connection.</p></article>
-            <article><h3>Does Vantage LA provide cosmetic or fitness services?</h3><p>Vantage LA provides strategy and coordination. Our network includes professionals in cosmetics, hair, skin, grooming, fitness, and physique. Any specialist assesses and delivers services within their own professional scope.</p></article>
-            <article><h3>Is Vantage LA a matchmaking service?</h3><p>Vantage LA is a private advisory service. We help you become better positioned to date and connect, and we can tap our network for relevant social opportunities and specialist support. We do not promise a particular match or another person’s interest.</p></article>
+            <article><h3>What does a private dating consultant help with?</h3><p>Vantage SoCal looks at the full picture: dating strategy, profiles and photos, communication, confidence, social opportunities, and personal presentation. When relevant, we also coordinate expertise in hair, skin, cosmetics, physique, and style.</p></article>
+            <article><h3>Is every Vantage SoCal plan personalized?</h3><p>Yes. Every client begins with a different situation, lifestyle, dating history, and goal. We identify the changes most likely to matter for you and bring in the right specialists and opportunities for that plan.</p></article>
+            <article><h3>Where does Vantage SoCal work with clients?</h3><p>We serve men throughout Los Angeles County, Orange County, and Ventura County. Your strategy can focus on a particular neighborhood, county, or wider Southern California social circle.</p></article>
+            <article><h3>Can Vantage SoCal help me meet the kind of women I’m interested in?</h3><p>We clarify the adult women you hope to meet by life stage, interests, values, and lifestyle. That understanding guides your positioning and the communities, settings, and social opportunities where you are most likely to make an authentic connection.</p></article>
+            <article><h3>Does Vantage SoCal provide cosmetic or fitness services?</h3><p>Vantage SoCal provides strategy and coordination. Our network includes professionals in cosmetics, hair, skin, grooming, fitness, and physique. Any specialist assesses and delivers services within their own professional scope.</p></article>
+            <article><h3>Is Vantage SoCal a matchmaking service?</h3><p>Vantage SoCal is a private advisory service. We help you become better positioned to date and connect, and we can tap our network for relevant social opportunities and specialist support. We do not promise a particular match or another person’s interest.</p></article>
           </div>
         </section>
         <section className="closing section-shell" aria-labelledby="closing-title"><div><p className="eyebrow">Your next chapter</p><h2 id="closing-title">It starts with<br /><em>your point of view.</em></h2></div><div className="coming-soon"><span className="status-dot" /><p>Consultations coming soon.</p><span>Good things are taking shape.</span></div></section>
       </main>
-      <footer className="site-footer"><a className="wordmark" href="#" aria-label="Vantage LA home">vantage la<span>.</span></a><p>Los Angeles · Orange County · Ventura County</p><span>© {new Date().getFullYear()} Vantage LA</span></footer>
+      <footer className="site-footer"><a className="wordmark" href="#" aria-label="Vantage SoCal home">vantage socal<span>.</span></a><p>Los Angeles · Orange County · Ventura County</p><span>© {new Date().getFullYear()} Vantage SoCal</span></footer>
     </>
   );
 }

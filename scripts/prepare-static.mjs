@@ -2,7 +2,7 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
 const outputDirectory = join(process.cwd(), 'dist', 'client');
-const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://vantage.upgradevillage.chatgpt.site').replace(/\/$/, '');
+const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://vantagesocal.com').replace(/\/$/, '');
 const lastModified = new Date().toISOString();
 
 await mkdir(outputDirectory, { recursive: true });

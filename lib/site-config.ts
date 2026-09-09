@@ -1,4 +1,4 @@
-const defaultSiteUrl = 'https://vantage.upgradevillage.chatgpt.site';
+const defaultSiteUrl = 'https://vantagesocal.com';
 
 export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? defaultSiteUrl).replace(/\/$/, '');
 export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
