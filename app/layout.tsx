@@ -6,8 +6,8 @@ import { publicAsset, siteUrl } from '@/lib/site-config';
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: 'Vantage SoCal | Private Dating Consultant for Men in Southern California',
-  description: 'Private dating, social, and lifestyle advisory for accomplished men across Los Angeles, Orange County, and Ventura County. Appearance, confidence, network, digital presence, and hands-on real-world support.',
+  title: 'Vantage SoCal | The Ultimate Private Wingman',
+  description: 'Look your best, date with confidence, build an amazing social life, go out with hands-on support, and host private events across Los Angeles, Orange County, and Ventura County.',
   applicationName: 'Vantage SoCal',
   category: 'Private personal and dating advisory',
   alternates: { canonical: '/' },
@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: '/',
     siteName: 'Vantage SoCal',
-    title: 'Vantage SoCal | Private Dating Consultant for Men in Southern California',
-    description: 'A discreet, high-touch advisory for accomplished men spanning appearance, dating, social life, digital presence, specialist access, and real-world support.',
+    title: 'Vantage SoCal | The Ultimate Private Wingman',
+    description: 'A discreet, hands-on private wingman helping accomplished men look their best, date better, expand their social lives, and host memorable events.',
   },
   twitter: {
     card: 'summary',
-    title: 'Vantage SoCal | Private Dating Consultant for Men in Southern California',
-    description: 'Private dating, social, and lifestyle advisory for accomplished men across Southern California.',
+    title: 'Vantage SoCal | The Ultimate Private Wingman',
+    description: 'Look your best, date better, build an amazing social life, and get hands-on support across Southern California.',
   },
   robots: {
     index: true,

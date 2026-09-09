@@ -20,7 +20,7 @@ const FOCUS_OPTIONS = [
   'Social circle, lifestyle & organic introductions',
   'Hands-on outings & real-time support',
   'Private events & hosting',
-  'The full advisory — help me set priorities',
+  'The full experience — help me set priorities',
 ];
 
 const TOTAL_STEPS = 6;
