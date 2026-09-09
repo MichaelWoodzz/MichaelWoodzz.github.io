@@ -10,7 +10,7 @@ function setup(id = 'G-TEST123') {
   return { tracker: createAnalytics(win, doc, id), win, scripts, reloads: () => reloads };
 }
 test('does not load Google or record events before permission', () => {
-  const s = setup(); s.tracker.trackSection('#consulting', 'hero'); s.tracker.deny();
+  const s = setup(); s.tracker.trackSection('#services', 'hero'); s.tracker.deny();
   assert.equal(s.scripts.length, 0); assert.equal(s.win.dataLayer, undefined);
 });
 test('one tag and one automatic page-view configuration after repeated grants', () => {
@@ -23,12 +23,12 @@ test('one tag and one automatic page-view configuration after repeated grants', 
 });
 test('tracks only known section links and stops immediately on withdrawal', () => {
   const s = setup(); s.tracker.grant();
-  s.tracker.trackSection('#consulting', 'hero');
+  s.tracker.trackSection('#services', 'hero');
   s.tracker.trackSection('mailto:private@example.com', 'navigation');
   const event = [...s.win.dataLayer.at(-1)];
-  assert.equal(event[1], 'select_content'); assert.equal(event[2].item_id, 'offer');
+  assert.equal(event[1], 'select_content'); assert.equal(event[2].item_id, 'services');
   const count = s.win.dataLayer.length;
-  s.tracker.deny(); s.tracker.trackSection('#los-angeles', 'navigation');
+  s.tracker.deny(); s.tracker.trackSection('#locations', 'navigation');
   assert.equal(s.win.dataLayer.length, count); assert.equal(s.win['ga-disable-G-TEST123'], true); assert.equal(s.reloads(), 1);
 });
 test('missing and invalid IDs never load a tag', () => {

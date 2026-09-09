@@ -11,21 +11,45 @@ const structuredData = {
       '@type': 'WebSite',
       '@id': `${siteUrl}/#website`,
       url: siteUrl,
-      name: 'Vantage SoCal',
+      name: 'Vantage',
+      alternateName: 'Vantage Private Dating and Social Advisory',
       description: 'The ultimate private wingman for accomplished men in Southern California.',
       inLanguage: 'en-US',
     },
     {
       '@type': 'Organization',
       '@id': `${siteUrl}/#organization`,
-      name: 'Vantage SoCal',
+      name: 'Vantage',
       url: siteUrl,
       description: 'A discreet, hands-on private wingman for accomplished men across Los Angeles, Orange County, and Ventura County.',
       email: 'michael@vantagesocal.com',
+      logo: `${siteUrl}/favicon.svg`,
+      contactPoint: {
+        '@type': 'ContactPoint',
+        email: 'michael@vantagesocal.com',
+        contactType: 'private client applications',
+        areaServed: 'US-CA',
+        availableLanguage: 'English',
+      },
+      knowsAbout: ['Dating strategy', 'Men’s image consulting', 'Social confidence', 'Personal networking', 'Private social events', 'Dating profile consulting'],
       areaServed: [
         { '@type': 'AdministrativeArea', name: 'Los Angeles County, California' },
         { '@type': 'AdministrativeArea', name: 'Orange County, California' },
         { '@type': 'AdministrativeArea', name: 'Ventura County, California' },
+      ],
+      potentialAction: {
+        '@type': 'ApplyAction',
+        name: 'Apply for Private Advisory',
+        target: `${siteUrl}/#apply`,
+      },
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': `${siteUrl}/#faq`,
+      mainEntity: [
+        { '@type': 'Question', name: 'What exactly does Vantage do?', acceptedAnswer: { '@type': 'Answer', text: 'Vantage helps accomplished men improve appearance, confidence, dating profiles, social circles, real-world social access, and private hosting through personal, hands-on advisory.' } },
+        { '@type': 'Question', name: 'Is Vantage a matchmaking service?', acceptedAnswer: { '@type': 'Answer', text: 'No. Vantage does not arrange dates from a database or sell introductions. It helps clients build a better life and social world, then facilitates natural connections when appropriate.' } },
+        { '@type': 'Question', name: 'Where does Vantage work?', acceptedAnswer: { '@type': 'Answer', text: 'Vantage serves Los Angeles County, Orange County, and Ventura County, with selective travel considered separately.' } },
       ],
     },
     {
@@ -52,7 +76,7 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, '\\u003c') }} />
       <a className="skip-link" href="#main">Skip to content</a>
       <header className="site-header">
-        <Link className="wordmark" href="/" aria-label="Vantage SoCal home">vantage socal<span>.</span></Link>
+        <Link className="wordmark" href="/" aria-label="Vantage home">vantage<span>.</span></Link>
         <nav aria-label="Main navigation"><a href="#advisory">How it works</a><a href="#services">Services</a><a href="#apply">Apply <ArrowUpRight size={15} aria-hidden="true" /></a></nav>
       </header>
 
@@ -83,10 +107,10 @@ export default function Home() {
         <section className="consulting section-shell" id="services" aria-labelledby="consulting-title">
           <div className="section-heading"><p className="eyebrow">02 / How we help</p><h2 id="consulting-title">Everything that makes<br /><em>your personal life better.</em></h2><p>Every client is different. We focus on the changes that will make the biggest difference for you.</p></div>
           <div className="services services-four">
-            <article className="service"><span className="service-number">01</span><h3>Look your best</h3><p>We help you improve your physique, hair, skin, grooming, wardrobe, photos, and overall presentation—with excellent specialists from our private network.</p><span className="service-topics">Physique · Hair · Skin · Style · Photos</span></article>
-            <article className="service"><span className="service-number">02</span><h3>Date better</h3><p>We improve your confidence, conversation, dating strategy, apps, photos, prompts, and messaging so you present yourself naturally and effectively.</p><span className="service-topics">Confidence · Strategy · Apps · Conversation</span></article>
-            <article className="service"><span className="service-number">03</span><h3>Build your social life</h3><p>We help you make better friends, find the right places, fill your calendar, and create a lifestyle that makes meeting people a normal part of your week.</p><span className="service-topics">Friends · Places · Plans · Introductions</span></article>
-            <article className="service"><span className="service-number">04</span><h3>Go out together</h3><p>We can join you at bars, dinners, clubs, and events, help with introductions, and give you useful feedback while the experience is still fresh.</p><span className="service-topics">Outings · Introductions · Support · Feedback</span></article>
+            <article className="service"><span className="service-number">01</span><h3>Look your best</h3><p>We help you improve your physique, hair, skin, grooming, wardrobe, photos, and overall presentation—with excellent specialists from our private network.</p><span className="service-topics">Physique · Hair · Skin · Style · Photos</span><Link className="service-detail-link" href="/mens-image-consulting-los-angeles/">Explore appearance advisory <ArrowUpRight size={14} aria-hidden="true" /></Link></article>
+            <article className="service"><span className="service-number">02</span><h3>Date better</h3><p>We improve your confidence, conversation, dating strategy, apps, photos, prompts, and messaging so you present yourself naturally and effectively.</p><span className="service-topics">Confidence · Strategy · Apps · Conversation</span><Link className="service-detail-link" href="/private-dating-advisor-los-angeles/">Explore dating advisory <ArrowUpRight size={14} aria-hidden="true" /></Link></article>
+            <article className="service"><span className="service-number">03</span><h3>Build your social life</h3><p>We help you make better friends, find the right places, fill your calendar, and create a lifestyle that makes meeting people a normal part of your week.</p><span className="service-topics">Friends · Places · Plans · Introductions</span><Link className="service-detail-link" href="/social-life-consulting-los-angeles/">Explore social advisory <ArrowUpRight size={14} aria-hidden="true" /></Link></article>
+            <article className="service"><span className="service-number">04</span><h3>Go out together</h3><p>We can join you at bars, dinners, clubs, and events, help with introductions, and give you useful feedback while the experience is still fresh.</p><span className="service-topics">Outings · Introductions · Support · Feedback</span><Link className="service-detail-link" href="/private-wingman-los-angeles/">Explore in-person support <ArrowUpRight size={14} aria-hidden="true" /></Link></article>
           </div>
         </section>
 
@@ -101,11 +125,11 @@ export default function Home() {
 
         <section className="positioning hosting section-shell" aria-labelledby="hosting-title">
           <p className="eyebrow section-label">04 / We create the party</p>
-          <div><h2 id="hosting-title">Throw great events.<br /><em>Become the center of a better social life.</em></h2><p className="section-lead">I can create the social environment instead of waiting for the right invitation.</p><div className="approach-text"><p>I can plan and host private dinners, parties, and gatherings, handling the venue, atmosphere, guest experience, hospitality, and logistics.</p><p>You become a stronger host, meet more people naturally, deepen your friendships, and build a social circle that keeps growing.</p></div></div>
+          <div><h2 id="hosting-title">Throw great events.<br /><em>Become the center of a better social life.</em></h2><p className="section-lead">I can create the social environment instead of waiting for the right invitation.</p><div className="approach-text"><p>I can plan and host private dinners, parties, and gatherings, handling the venue, atmosphere, guest experience, hospitality, and logistics.</p><p>You become a stronger host, meet more people naturally, deepen your friendships, and build a social circle that keeps growing.</p></div><Link className="text-link-dark" href="/private-events-los-angeles/">Learn about private events and hosting <ArrowUpRight size={15} aria-hidden="true" /></Link></div>
         </section>
 
         <section className="local section-shell" id="locations" aria-labelledby="local-title">
-          <div className="local-intro"><p className="eyebrow">05 / Home ground</p><h2 id="local-title">Los Angeles.<br /><em>Orange County.<br />Ventura County.</em></h2><p>I know the region: the neighborhoods, venues, communities, specialists, and social opportunities.</p><span className="local-signature">VANTAGE SOCAL / PRIVATE ADVISORY</span></div>
+          <div className="local-intro"><p className="eyebrow">05 / Home ground</p><h2 id="local-title">Los Angeles.<br /><em>Orange County.<br />Ventura County.</em></h2><p>I know the region: the neighborhoods, venues, communities, specialists, and social opportunities.</p><span className="local-signature">VANTAGE / PRIVATE ADVISORY</span></div>
           <div className="local-details"><p>I help position you around the adult women and social world you are genuinely interested in—from age and interests to values and lifestyle.</p><div className="local-areas" aria-label="Service areas"><span>Los Angeles County</span><span>Orange County</span><span>Ventura County</span><span>Selective travel</span></div><p>We turn that into a practical plan for where you go, how you present yourself, who you meet, and what you do each week.</p><p className="local-emphasis">The right places. The right people. A better social life.</p></div>
         </section>
 
@@ -130,7 +154,7 @@ export default function Home() {
       </main>
 
       <a className="floating-apply" href="#apply">Apply for Private Advisory <ArrowUpRight size={17} aria-hidden="true" /></a>
-      <footer className="site-footer"><Link className="wordmark" href="/" aria-label="Vantage SoCal home">vantage socal<span>.</span></Link><p>Los Angeles · Orange County · Ventura County</p><span>© {new Date().getFullYear()} Vantage SoCal</span></footer>
+      <footer className="site-footer site-footer-expanded"><Link className="wordmark" href="/" aria-label="Vantage home">vantage<span>.</span></Link><nav className="footer-links" aria-label="Footer navigation"><Link href="/about/">About</Link><Link href="/how-it-works/">How it works</Link><Link href="/southern-california-service-area/">Service area</Link><Link href="/privacy/">Privacy</Link><a href="#apply">Apply</a></nav><p>Los Angeles · Orange County · Ventura County</p><span>© {new Date().getFullYear()} Vantage</span></footer>
     </>
   );
 }

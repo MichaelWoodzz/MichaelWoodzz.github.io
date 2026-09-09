@@ -60,3 +60,27 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Notify search engines with IndexNow
+        continue-on-error: true
+        shell: bash
+        run: |
+          curl --fail-with-body --silent --show-error \
+            -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "host": "vantagesocal.com",
+              "key": "7f4a23e8bc9d41a5b72ed8cf0310a964",
+              "keyLocation": "https://vantagesocal.com/7f4a23e8bc9d41a5b72ed8cf0310a964.txt",
+              "urlList": [
+                "https://vantagesocal.com/",
+                "https://vantagesocal.com/about/",
+                "https://vantagesocal.com/how-it-works/",
+                "https://vantagesocal.com/private-dating-advisor-los-angeles/",
+                "https://vantagesocal.com/mens-image-consulting-los-angeles/",
+                "https://vantagesocal.com/social-life-consulting-los-angeles/",
+                "https://vantagesocal.com/private-wingman-los-angeles/",
+                "https://vantagesocal.com/private-events-los-angeles/",
+                "https://vantagesocal.com/southern-california-service-area/",
+                "https://vantagesocal.com/privacy/"
+              ]
+            }'
