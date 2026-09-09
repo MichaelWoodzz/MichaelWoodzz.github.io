@@ -63,7 +63,7 @@ export default function Home() {
             <h1 id="hero-title">Look your absolute best.<br /><em>Build an amazing social life.</em></h1>
             <p className="hero-description">I help you look your best, meet more people, build a great social life, and become more confident—with the support of a well-connected friend beside you.</p>
             <a className="primary-link" href="#apply">Apply for Private Advisory <ArrowUpRight size={20} aria-hidden="true" /></a>
-            <div className="hero-bottom"><span>Selective · Discreet · Southern California</span><a href="#advisory" aria-label="Explore the private advisory"><ArrowDown size={20} aria-hidden="true" /></a></div>
+            <div className="hero-bottom"><span>Selective · Discreet · Southern California</span><a href="#apply" aria-label="Go to the private advisory application"><ArrowDown size={20} aria-hidden="true" /></a></div>
           </div>
           <figure className="hero-image">
             <Image src={publicAsset('/vantage-coastal-hero.webp')} alt="An accomplished man overlooking the Southern California coast" width="1536" height="1024" priority />
