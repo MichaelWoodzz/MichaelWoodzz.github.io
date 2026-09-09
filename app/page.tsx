@@ -1,5 +1,6 @@
 import { ArrowDown, ArrowUpRight } from 'lucide-react';
 import { publicAsset, siteUrl } from '@/lib/site-config';
+import { InquiryForm } from '@/components/InquiryForm';
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -50,7 +51,7 @@ export default function Home() {
       <a className="skip-link" href="#main">Skip to content</a>
       <header className="site-header">
         <a className="wordmark" href="#" aria-label="Vantage SoCal home">vantage socal<span>.</span></a>
-        <nav aria-label="Main navigation"><a href="#approach">The approach</a><a href="#los-angeles">Our locations</a><a href="#consulting">The offer <ArrowUpRight size={15} aria-hidden="true" /></a><a href="mailto:michael@vantagesocal.com">Get in touch</a></nav>
+        <nav aria-label="Main navigation"><a href="#approach">The approach</a><a href="#los-angeles">Our locations</a><a href="#consulting">The offer <ArrowUpRight size={15} aria-hidden="true" /></a><a href="#contact">Get in touch</a></nav>
       </header>
       <main id="main">
         <section className="hero" aria-labelledby="hero-title">
@@ -112,7 +113,10 @@ export default function Home() {
             <article><h3>Is Vantage SoCal a matchmaking service?</h3><p>Vantage SoCal is a private advisory service. We help you become better positioned to date and connect, and we can tap our network for relevant social opportunities and specialist support. We do not promise a particular match or another person’s interest.</p></article>
           </div>
         </section>
-        <section className="closing section-shell" aria-labelledby="closing-title"><div><p className="eyebrow">Your next chapter</p><h2 id="closing-title">It starts with<br /><em>your point of view.</em></h2><p className="section-lead">Ready to talk through your situation? Reach out and we&apos;ll follow up personally.</p><a className="primary-link" href="mailto:michael@vantagesocal.com">Email michael@vantagesocal.com <ArrowUpRight size={20} aria-hidden="true" /></a></div></section>
+        <section className="closing section-shell" id="contact" aria-labelledby="closing-title">
+          <div className="closing-intro"><p className="eyebrow">Your next chapter</p><h2 id="closing-title">It starts with<br /><em>your point of view.</em></h2><p className="section-lead">Answer a few quick questions and we&apos;ll follow up personally.</p></div>
+          <InquiryForm />
+        </section>
       </main>
       <footer className="site-footer"><a className="wordmark" href="#" aria-label="Vantage SoCal home">vantage socal<span>.</span></a><p>Los Angeles · Orange County · Ventura County</p><span>© {new Date().getFullYear()} Vantage SoCal</span></footer>
     </>
