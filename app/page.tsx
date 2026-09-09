@@ -1,4 +1,6 @@
 import { ArrowDown, ArrowUpRight } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
 import { publicAsset, siteUrl } from '@/lib/site-config';
 import { InquiryForm } from '@/components/InquiryForm';
 
@@ -33,7 +35,7 @@ const structuredData = {
       provider: { '@id': `${siteUrl}/#organization` },
       url: siteUrl,
       serviceType: 'Private dating, social, appearance, and lifestyle advisory for accomplished men',
-      description: 'Hands-on help to look your best, date with confidence, build an exceptional social life, go out with support, and host private events.',
+      description: 'Personal, hands-on help from a well-connected advisor to look your best, date with confidence, build an exceptional social life, go out with support, and host private events.',
       audience: { '@type': 'Audience', audienceType: 'Accomplished adult men seeking private personal advisory' },
       areaServed: [
         { '@type': 'AdministrativeArea', name: 'Los Angeles County, California' },
@@ -50,8 +52,8 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, '\\u003c') }} />
       <a className="skip-link" href="#main">Skip to content</a>
       <header className="site-header">
-        <a className="wordmark" href="#" aria-label="Vantage SoCal home">vantage socal<span>.</span></a>
-        <nav aria-label="Main navigation"><a href="#advisory">The advisory</a><a href="#access">Real-world access</a><a href="#apply">Apply <ArrowUpRight size={15} aria-hidden="true" /></a></nav>
+        <Link className="wordmark" href="/" aria-label="Vantage SoCal home">vantage socal<span>.</span></Link>
+        <nav aria-label="Main navigation"><a href="#advisory">How it works</a><a href="#services">Services</a><a href="#apply">Apply <ArrowUpRight size={15} aria-hidden="true" /></a></nav>
       </header>
 
       <main id="main">
@@ -59,26 +61,35 @@ export default function Home() {
           <div className="hero-copy">
             <p className="eyebrow"><span className="small-rule" /> The ultimate private wingman</p>
             <h1 id="hero-title">Look your absolute best.<br /><em>Build an amazing social life.</em></h1>
-            <p className="hero-description">We help you upgrade how you look, meet the right people, go out with confidence, and build a social life you are excited to live.</p>
+            <p className="hero-description">I help you look your best, meet more people, build a great social life, and become more confident—with the support of a well-connected friend beside you.</p>
             <a className="primary-link" href="#apply">Apply for Private Advisory <ArrowUpRight size={20} aria-hidden="true" /></a>
             <div className="hero-bottom"><span>Selective · Discreet · Southern California</span><a href="#advisory" aria-label="Explore the private advisory"><ArrowDown size={20} aria-hidden="true" /></a></div>
           </div>
           <figure className="hero-image">
-            <img src={publicAsset('/vantage-coastal-hero.webp')} alt="An accomplished man overlooking the Southern California coast" width="1536" height="1024" fetchPriority="high" decoding="async" />
+            <Image src={publicAsset('/vantage-coastal-hero.webp')} alt="An accomplished man overlooking the Southern California coast" width="1536" height="1024" priority />
             <figcaption><span>Look better. Go out. Live better.</span><span>V / 01</span></figcaption>
           </figure>
         </section>
 
+        <section className="application-section section-shell" id="apply" aria-labelledby="apply-title">
+          <div className="application-intro">
+            <p className="eyebrow">Apply for private advisory</p>
+            <h2 id="apply-title">Tell me what you want<br /><em>your life to look like.</em></h2>
+            <p>Every situation is different. This short application helps me understand where you are, what you want, and how involved you would like me to be.</p>
+          </div>
+          <InquiryForm />
+        </section>
+
         <section className="approach section-shell" id="advisory" aria-labelledby="approach-title">
-          <p className="eyebrow section-label">01 / What we do</p>
+          <p className="eyebrow section-label">01 / The difference</p>
           <div className="approach-copy">
-            <h2 id="approach-title">Think of us as<br /><span>your ultimate wingman.</span></h2>
-            <div className="approach-text"><p>You have built a successful career. We help your appearance, dating life, friendships, and social calendar catch up.</p><p>We make the plan, connect you with excellent specialists, go out with you, introduce you to better environments, and help you create a life where meeting great people happens naturally.</p></div>
-            <p className="mandate-line">A private team focused on making your personal life exceptional.</p>
+            <h2 id="approach-title">A well-connected friend.<br /><span>Not a matchmaking service.</span></h2>
+            <div className="approach-text"><p>You work directly with me. I get to know you, help you make the right changes, go out with you, organize plans, and become part of the process in a natural way. It feels more like having a trusted friend and ultimate wingman than hiring a coach.</p><p>I have a vast network across Los Angeles and Southern California, including the social, creative, hospitality, fitness, fashion, and entertainment worlds. When the fit and circumstances are right, that network can create organic opportunities to meet influencers, models, celebrities, and other interesting people.</p></div>
+            <p className="mandate-line">This is not coaching or matchmaking. It is a category of its own: personal, organic, and built around your real life.</p>
           </div>
         </section>
 
-        <section className="consulting section-shell" aria-labelledby="consulting-title">
+        <section className="consulting section-shell" id="services" aria-labelledby="consulting-title">
           <div className="section-heading"><p className="eyebrow">02 / How we help</p><h2 id="consulting-title">Everything that makes<br /><em>your personal life better.</em></h2><p>Every client is different. We focus on the changes that will make the biggest difference for you.</p></div>
           <div className="services services-four">
             <article className="service"><span className="service-number">01</span><h3>Look your best</h3><p>We help you improve your physique, hair, skin, grooming, wardrobe, photos, and overall presentation—with excellent specialists from our private network.</p><span className="service-topics">Physique · Hair · Skin · Style · Photos</span></article>
@@ -88,16 +99,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="expertise section-shell" aria-labelledby="system-title">
-          <div className="section-heading"><p className="eyebrow">03 / The whole picture</p><h2 id="system-title">A better dating life starts<br /><em>with a better life.</em></h2><p>How you look, where you go, who you know, and how you show up all work together.</p></div>
-          <div className="system-formula" aria-label="The Vantage SoCal advisory system">
-            <span>Appearance</span><span>Confidence</span><span>Social skills</span><span>Social circle</span><span>Lifestyle</span><span>Digital presence</span><span>Access</span>
-          </div>
-          <p className="system-result">We improve all of it together, with a clear plan and a team beside you.</p>
-        </section>
-
         <section className="fieldwork section-shell" id="access" aria-labelledby="access-title">
-          <div className="section-heading"><p className="eyebrow">04 / We go with you</p><h2 id="access-title">You do not have to<br /><em>figure it out alone.</em></h2><p>Your advisor can be there with you in the real world.</p></div>
+          <div className="section-heading"><p className="eyebrow">03 / We go with you</p><h2 id="access-title">You do not have to<br /><em>figure it out alone.</em></h2><p>I can be there with you in the real world.</p></div>
           <div className="services">
             <article className="service"><span className="service-number">01 / Go out</span><h3>We join you.</h3><p>We can accompany you to bars, clubs, dinners, parties, and events selected around the kind of people you want to meet.</p></article>
             <article className="service"><span className="service-number">02 / Make it easier</span><h3>Support in the moment.</h3><p>We help with introductions, conversation, group dynamics, and the small decisions that make a night go well.</p></article>
@@ -106,38 +109,31 @@ export default function Home() {
         </section>
 
         <section className="positioning hosting section-shell" aria-labelledby="hosting-title">
-          <p className="eyebrow section-label">05 / We create the party</p>
-          <div><h2 id="hosting-title">Throw great events.<br /><em>Become the center of a better social life.</em></h2><p className="section-lead">We can create the social environment instead of waiting for the right invitation.</p><div className="approach-text"><p>We plan and host private dinners, parties, and gatherings, handling the venue, atmosphere, guest experience, hospitality, and logistics.</p><p>You become a stronger host, meet more people naturally, deepen your friendships, and build a social circle that keeps growing.</p></div></div>
+          <p className="eyebrow section-label">04 / We create the party</p>
+          <div><h2 id="hosting-title">Throw great events.<br /><em>Become the center of a better social life.</em></h2><p className="section-lead">I can create the social environment instead of waiting for the right invitation.</p><div className="approach-text"><p>I can plan and host private dinners, parties, and gatherings, handling the venue, atmosphere, guest experience, hospitality, and logistics.</p><p>You become a stronger host, meet more people naturally, deepen your friendships, and build a social circle that keeps growing.</p></div></div>
         </section>
 
         <section className="local section-shell" id="locations" aria-labelledby="local-title">
-          <div className="local-intro"><p className="eyebrow">06 / Our home ground</p><h2 id="local-title">Los Angeles.<br /><em>Orange County.<br />Ventura County.</em></h2><p>Local knowledge lets us make the plan specific: the right neighborhoods, venues, communities, specialists, and social opportunities.</p><span className="local-signature">VANTAGE SOCAL / PRIVATE ADVISORY</span></div>
-          <div className="local-details"><p>We position you around the adult women you are genuinely interested in meeting—from life stage and values to interests and lifestyle. That clarity shapes your presentation, your social calendar, and where you spend your time.</p><div className="local-areas" aria-label="Service areas"><span>Los Angeles County</span><span>Orange County</span><span>Ventura County</span><span>Selective travel</span></div><p>Your plan may center on your own neighborhood or span the region. We account for your routine, preferences, and desired social world, then connect the geography to a practical weekly strategy.</p><p className="local-emphasis">Broad regional access. Precise personal positioning.</p></div>
-        </section>
-
-        <section className="process section-shell" aria-labelledby="process-title">
-          <div className="section-heading"><p className="eyebrow">07 / How it works</p><h2 id="process-title">Simple plan.<br /><em>Hands-on help.</em></h2><p>We work with a limited number of clients so the support stays personal.</p></div>
-          <div className="services"><article className="service"><span className="service-number">01 / Assess</span><h3>See what will help most.</h3><p>We look at your appearance, dating life, confidence, social circle, schedule, and goals.</p></article><article className="service"><span className="service-number">02 / Upgrade</span><h3>Make the right changes.</h3><p>We set priorities and connect you with the right experts, places, and people.</p></article><article className="service"><span className="service-number">03 / Live it</span><h3>Put it into action.</h3><p>We go out, make introductions, improve your profiles, create events, and keep building momentum.</p></article></div>
+          <div className="local-intro"><p className="eyebrow">05 / Home ground</p><h2 id="local-title">Los Angeles.<br /><em>Orange County.<br />Ventura County.</em></h2><p>I know the region: the neighborhoods, venues, communities, specialists, and social opportunities.</p><span className="local-signature">VANTAGE SOCAL / PRIVATE ADVISORY</span></div>
+          <div className="local-details"><p>I help position you around the adult women and social world you are genuinely interested in—from age and interests to values and lifestyle.</p><div className="local-areas" aria-label="Service areas"><span>Los Angeles County</span><span>Orange County</span><span>Ventura County</span><span>Selective travel</span></div><p>We turn that into a practical plan for where you go, how you present yourself, who you meet, and what you do each week.</p><p className="local-emphasis">The right places. The right people. A better social life.</p></div>
         </section>
 
         <section className="faq section-shell" aria-labelledby="faq-title">
-          <div className="section-heading"><p className="eyebrow">08 / Questions</p><h2 id="faq-title">A different kind<br /><em>of private advisory.</em></h2><p>Built for accomplished men who want capable support across their personal life.</p></div>
+          <div className="section-heading"><p className="eyebrow">06 / Simply explained</p><h2 id="faq-title">Personal help<br /><em>that fits your real life.</em></h2><p>For accomplished men who want a better personal and social life.</p></div>
           <div className="faq-list">
-            <article><h3>Is this dating coaching?</h3><p>It is much more hands-on. Think of Vantage SoCal as your private wingman: we help you look better, improve your dating life, go out with you, build your network, and create great events.</p></article>
-            <article><h3>Is this matchmaking?</h3><p>Matchmaking may introduce two people. Our work improves the full system around you so you are consistently better positioned to meet and connect with people through apps, introductions, events, and everyday life.</p></article>
-            <article><h3>How hands-on can the team be?</h3><p>Very. We can go out with you, help with introductions, coordinate appearance specialists, organize outings, and plan private gatherings.</p></article>
-            <article><h3>Is the service discreet?</h3><p>Yes. Privacy, sound judgment, and personal attention are central to the engagement. We discuss the appropriate level of involvement before any introductions, outings, or specialist coordination.</p></article>
-            <article><h3>Who is the service for?</h3><p>Accomplished adult men whose personal lives have not kept pace with their professional success—and who are prepared to invest attention, effort, and resources in changing that.</p></article>
-            <article><h3>Do you guarantee specific outcomes?</h3><p>No. Attraction and relationships involve other people and cannot be guaranteed. We provide strategy, access, coordination, honest feedback, and practical support designed to improve how you show up and the opportunities around you.</p></article>
+            <article><h3>What exactly do you do?</h3><p>I help you look your best, improve your confidence, strengthen your dating profiles, build your social circle, find better places to go, join you on outings, and throw events that bring people together.</p></article>
+            <article><h3>Is this matchmaking?</h3><p>No. I do not sell introductions or arrange dates from a database. I help you build a better life and social world, then use my network when a natural, appropriate opportunity arises.</p></article>
+            <article><h3>What makes it different?</h3><p>The relationship is personal and hands-on. I act more like a trusted, well-connected friend than a conventional coach. There is no fixed course because every client needs something different.</p></article>
+            <article><h3>Is it private?</h3><p>Yes. I work discreetly with a limited number of clients. Introductions, outings, specialists, and events are handled with care and good judgment.</p></article>
           </div>
         </section>
-        <section className="closing section-shell" id="apply" aria-labelledby="apply-title">
-          <div className="closing-intro"><p className="eyebrow">Private client applications</p><h2 id="apply-title">Look your best.<br /><em>Live a better life.</em></h2><p className="closing-copy">Tell us what you want to improve. We will show you how the right private wingman can help make it happen.</p></div>
-          <InquiryForm />
+        <section className="closing section-shell" aria-labelledby="closing-title">
+          <div className="closing-intro"><p className="eyebrow">Private client applications</p><h2 id="closing-title">Ready for a better<br /><em>personal life?</em></h2><p className="closing-copy">Tell me where you are and where you want to go.</p></div>
+          <a className="primary-link" href="#apply">Start your application <ArrowUpRight size={20} aria-hidden="true" /></a>
         </section>
       </main>
 
-      <footer className="site-footer"><a className="wordmark" href="#" aria-label="Vantage SoCal home">vantage socal<span>.</span></a><p>Los Angeles · Orange County · Ventura County</p><span>© {new Date().getFullYear()} Vantage SoCal</span></footer>
+      <footer className="site-footer"><Link className="wordmark" href="/" aria-label="Vantage SoCal home">vantage socal<span>.</span></Link><p>Los Angeles · Orange County · Ventura County</p><span>© {new Date().getFullYear()} Vantage SoCal</span></footer>
     </>
   );
 }
