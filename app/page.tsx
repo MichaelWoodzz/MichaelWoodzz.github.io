@@ -1,6 +1,5 @@
 import { ArrowDown, ArrowUpRight } from 'lucide-react';
-
-const siteUrl = 'https://vantage.upgradevillage.chatgpt.site';
+import { publicAsset, siteUrl } from '@/lib/site-config';
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -62,7 +61,7 @@ export default function Home() {
             <div className="hero-bottom"><span>Los Angeles · Orange County · Ventura County</span><a href="#consulting" aria-label="Explore consulting services"><ArrowDown size={20} aria-hidden="true" /></a></div>
           </div>
           <figure className="hero-image">
-            <img src="/vantage-coastal-hero.webp" alt="A man looking over the Southern California coast, representing Vantage private dating consulting" width="1536" height="1024" fetchPriority="high" decoding="async" />
+            <img src={publicAsset('/vantage-coastal-hero.webp')} alt="A man looking over the Southern California coast, representing Vantage private dating consulting" width="1536" height="1024" fetchPriority="high" decoding="async" />
             <figcaption><span>A new point of view.</span><span>V / 01</span></figcaption>
           </figure>
         </section>

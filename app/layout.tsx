@@ -2,9 +2,10 @@ import type { Metadata } from 'next';
 import { Geist } from 'next/font/google';
 import './globals.css';
 import { GoogleAnalytics } from './google-analytics';
+import { publicAsset, siteUrl } from '@/lib/site-config';
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
 export const metadata: Metadata = {
-  metadataBase: new URL('https://vantage.upgradevillage.chatgpt.site'),
+  metadataBase: new URL(siteUrl),
   title: 'Vantage | Private Dating Consultant for Men in Los Angeles',
   description: 'Private dating and personal advisory for men across Los Angeles, Orange County, and Ventura County. Improve your appearance, confidence, social life, and dating strategy with a plan built around you.',
   applicationName: 'Vantage',
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
       'max-video-preview': -1,
     },
   },
-  icons: { icon: '/favicon.svg' },
+  icons: { icon: publicAsset('/favicon.svg') },
 };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return <html lang="en"><body className={`${geistSans.variable} antialiased`}>{children}<GoogleAnalytics /></body></html>;
