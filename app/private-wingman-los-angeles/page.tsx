@@ -5,7 +5,7 @@ export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: 'Private Wingman and In-Person Social Support in Los Angeles | Vantage',
-  description: 'A discreet private wingman for accomplished men in Los Angeles. Go out together, navigate introductions, build confidence, and receive practical real-time support.',
+  description: 'A discreet private wingman for men in Los Angeles. Go out together, navigate introductions, build confidence, and receive practical real-time support.',
   alternates: { canonical: '/private-wingman-los-angeles/' },
   openGraph: { title: 'Private Wingman in Los Angeles | Vantage', description: 'Discreet, in-person social support that feels like going out with a capable friend.', url: '/private-wingman-los-angeles/' },
 };

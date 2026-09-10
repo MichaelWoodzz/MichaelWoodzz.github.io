@@ -51,7 +51,7 @@ export function AdvisoryDetailPage({
         description: lead,
         url: pageUrl,
         provider: { '@type': 'Organization', '@id': `${siteUrl}/#organization`, name: 'Vantage', url: siteUrl },
-        audience: { '@type': 'Audience', audienceType: 'Accomplished adult men' },
+        audience: { '@type': 'Audience', audienceType: 'Adult men seeking discreet, high-touch personal advisory' },
         areaServed: [
           { '@type': 'AdministrativeArea', name: 'Los Angeles County, California' },
           { '@type': 'AdministrativeArea', name: 'Orange County, California' },

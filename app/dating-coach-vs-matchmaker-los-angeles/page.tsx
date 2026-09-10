@@ -5,11 +5,11 @@ export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: 'Dating Coach vs Matchmaker in Los Angeles | Vantage',
-  description: 'Compare a dating coach, matchmaker, and Vantage private advisory for successful men in Los Angeles. See which kind of help fits your dating and social life.',
+  description: 'Compare a dating coach, matchmaker, and Vantage private advisory for men in Los Angeles. See which kind of help fits your dating and social life.',
   alternates: { canonical: '/dating-coach-vs-matchmaker-los-angeles/' },
   openGraph: {
     title: 'Dating Coach vs Matchmaker in Los Angeles | Vantage',
-    description: 'A clear comparison for successful men deciding what kind of dating and social support they need.',
+    description: 'A clear comparison for men deciding what kind of dating and social support they need.',
     url: '/dating-coach-vs-matchmaker-los-angeles/',
   },
 };
@@ -19,8 +19,8 @@ export default function Page() {
     path="/dating-coach-vs-matchmaker-los-angeles/"
     eyebrow="Choosing the right help"
     title="Dating coach, matchmaker, or private wingman?"
-    lead="The right choice depends on the real problem. Vantage is built for successful men who need more than advice or introductions: they want a trusted person helping improve the whole system around their personal life."
-    serviceType="Private dating and social advisory for successful men"
+    lead="The right choice depends on the real problem. Vantage is built for men who need more than advice or introductions: they want a trusted person helping improve the whole system around their personal life."
+    serviceType="Private dating and social advisory for men"
     sections={[
       {
         title: 'When a dating coach may be enough',
@@ -45,11 +45,11 @@ export default function Page() {
     questions={[
       { question: 'Is Vantage a dating coach?', answer: 'Vantage can provide dating coaching, but the service is broader. It can also coordinate appearance specialists, improve your social circle, join you on outings, and create private events.' },
       { question: 'Is Vantage a matchmaker?', answer: 'No. Vantage does not sell matches from a database. Natural introductions may happen through the network when the fit and circumstances are appropriate.' },
-      { question: 'Who is Vantage best for?', answer: 'Vantage is best for professionally or financially successful adult men whose appearance, confidence, dating life, friendships, or social calendar have not kept pace with the rest of their life.' },
+      { question: 'Who is Vantage best for?', answer: 'Vantage is best for adult men with the means and commitment to invest in their appearance, confidence, dating life, friendships, and social calendar. Career status is not the test.' },
       { question: 'Where is the service available?', answer: 'Vantage serves Los Angeles County, Orange County, and Ventura County, with selective travel considered separately.' },
     ]}
     related={[
-      { href: '/private-dating-advisor-los-angeles/', label: 'Dating advisory for successful men' },
+      { href: '/private-dating-advisor-los-angeles/', label: 'Private dating advisory for men' },
       { href: '/private-wingman-los-angeles/', label: 'Private wingman support' },
       { href: '/how-it-works/', label: 'How Vantage works' },
     ]}

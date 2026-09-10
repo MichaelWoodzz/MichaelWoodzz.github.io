@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     url: '/',
     siteName: 'Vantage',
     title: 'Vantage | The Ultimate Private Wingman in Los Angeles',
-    description: 'A discreet, hands-on private wingman helping accomplished men look their best, date better, expand their social lives, and host memorable events.',
+    description: 'A discreet, hands-on private wingman helping men look their best, date better, expand their social lives, and host memorable events.',
     images: [{ url: '/vantage-coastal-hero.png', width: 1536, height: 1024, alt: 'Vantage private dating and social advisory in Southern California' }],
   },
   twitter: {

@@ -5,7 +5,7 @@ export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: 'Social Life Consultant for Men in Los Angeles | Vantage',
-  description: 'Private social-life consulting for accomplished men. Build a stronger network, an active calendar, better friendships, and more natural ways to meet people in Los Angeles.',
+  description: 'Private social-life consulting for men. Build a stronger network, an active calendar, better friendships, and more natural ways to meet people in Los Angeles.',
   alternates: { canonical: '/social-life-consulting-los-angeles/' },
   openGraph: { title: 'Social Life Consulting for Men in Los Angeles | Vantage', description: 'Build a stronger circle, better calendar, and more connected lifestyle.', url: '/social-life-consulting-los-angeles/' },
 };
@@ -15,7 +15,7 @@ export default function Page() {
     path="/social-life-consulting-los-angeles/"
     eyebrow="Social life and network advisory"
     title="Build a social life that creates its own opportunities."
-    lead="Vantage helps accomplished men develop stronger friendships, enter better environments, make plans consistently, and meet more people through real life instead of relying only on dating apps."
+    lead="Vantage helps men develop stronger friendships, enter better environments, make plans consistently, and meet more people through real life instead of relying only on dating apps."
     serviceType="Social life and personal network consulting"
     sections={[
       { title: 'Turn an empty calendar into a connected life', paragraphs: ['Professional success can consume the time and attention that friendships need. The result is often a small circle, repetitive weekends, and too much dependence on dating apps.', 'We build a realistic weekly rhythm around places, interests, communities, invitations, and relationships that you can sustain.'], points: ['A stronger social circle', 'Better recurring environments', 'More plans, dinners, and activities', 'Natural opportunities to meet new people'] },

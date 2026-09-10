@@ -13,7 +13,7 @@ const structuredData = {
       url: siteUrl,
       name: 'Vantage',
       alternateName: 'Vantage Private Dating and Social Advisory',
-      description: 'The ultimate private wingman for accomplished men in Southern California.',
+      description: 'The ultimate private wingman for discerning men in Southern California.',
       inLanguage: 'en-US',
     },
     {
@@ -21,7 +21,7 @@ const structuredData = {
       '@id': `${siteUrl}/#organization`,
       name: 'Vantage',
       url: siteUrl,
-      description: 'A discreet, hands-on private wingman for accomplished men across Los Angeles, Orange County, and Ventura County.',
+      description: 'A discreet, hands-on private wingman for men who want more from their personal lives across Los Angeles, Orange County, and Ventura County.',
       email: 'michael@vantagesocal.com',
       logo: `${siteUrl}/favicon.svg`,
       contactPoint: {
@@ -47,7 +47,7 @@ const structuredData = {
       '@type': 'FAQPage',
       '@id': `${siteUrl}/#faq`,
       mainEntity: [
-        { '@type': 'Question', name: 'What exactly does Vantage do?', acceptedAnswer: { '@type': 'Answer', text: 'Vantage helps accomplished men improve appearance, confidence, dating profiles, social circles, real-world social access, and private hosting through personal, hands-on advisory.' } },
+        { '@type': 'Question', name: 'What exactly does Vantage do?', acceptedAnswer: { '@type': 'Answer', text: 'Vantage helps private clients improve appearance, confidence, dating profiles, social circles, real-world social access, and private hosting through personal, hands-on advisory.' } },
         { '@type': 'Question', name: 'Is Vantage a matchmaking service?', acceptedAnswer: { '@type': 'Answer', text: 'No. Vantage does not arrange dates from a database or sell introductions. It helps clients build a better life and social world, then facilitates natural connections when appropriate.' } },
         { '@type': 'Question', name: 'Where does Vantage work?', acceptedAnswer: { '@type': 'Answer', text: 'Vantage serves Los Angeles County, Orange County, and Ventura County, with selective travel considered separately.' } },
       ],
@@ -58,9 +58,9 @@ const structuredData = {
       name: 'Private Dating, Social, and Lifestyle Advisory for Men',
       provider: { '@id': `${siteUrl}/#organization` },
       url: siteUrl,
-      serviceType: 'Private dating, social, appearance, and lifestyle advisory for accomplished men',
+      serviceType: 'Private dating, social, appearance, and lifestyle advisory for men',
       description: 'Personal, hands-on help from a well-connected advisor to look your best, date with confidence, build an exceptional social life, go out with support, and host private events.',
-      audience: { '@type': 'Audience', audienceType: 'Accomplished adult men seeking private personal advisory' },
+      audience: { '@type': 'Audience', audienceType: 'Adult men seeking discreet, high-touch personal advisory' },
       areaServed: [
         { '@type': 'AdministrativeArea', name: 'Los Angeles County, California' },
         { '@type': 'AdministrativeArea', name: 'Orange County, California' },
@@ -91,7 +91,7 @@ export default function Home() {
             <div className="hero-bottom"><span>Selective · Discreet · Southern California</span><a href="#apply" aria-label="Go to the private advisory application"><ArrowDown size={20} aria-hidden="true" /></a></div>
           </div>
           <figure className="hero-image">
-            <Image src={publicAsset('/vantage-coastal-hero.webp')} alt="An accomplished man overlooking the Southern California coast" width="1536" height="1024" priority />
+            <Image src={publicAsset('/vantage-coastal-hero.webp')} alt="A man overlooking the Southern California coast" width="1536" height="1024" priority />
             <figcaption><span>Look better. Go out. Live better.</span><span>V / 01</span></figcaption>
           </figure>
         </section>
@@ -135,12 +135,12 @@ export default function Home() {
         </section>
 
         <section className="faq section-shell" aria-labelledby="faq-title">
-          <div className="section-heading"><p className="eyebrow">06 / Simply explained</p><h2 id="faq-title">Personal help<br /><em>that fits your real life.</em></h2><p>For accomplished men who want a better personal and social life.</p></div>
+          <div className="section-heading"><p className="eyebrow">06 / Simply explained</p><h2 id="faq-title">Personal help<br /><em>that fits your real life.</em></h2><p>For men with high standards who want a better personal and social life.</p></div>
           <div className="faq-list">
             <article><h3>What exactly do you do?</h3><p>I help you look your best, improve your confidence, strengthen your dating profiles, build your social circle, find better places to go, join you on outings, and throw events that bring people together.</p></article>
             <article><h3>Is this matchmaking?</h3><p>No. I do not sell introductions or arrange dates from a database. I help you build a better life and social world, then use my network when a natural, appropriate opportunity arises.</p></article>
             <article><h3>What makes it different?</h3><p>The relationship is personal and hands-on. I act more like a trusted, well-connected friend than a conventional coach. There is no fixed course because every client needs something different.</p></article>
-            <article><h3>I am successful, but my dating and social life are behind. Can you help?</h3><p>That is exactly who Vantage is built for. We identify the few changes with the highest impact, then help you execute them across appearance, dating, friendships, venues, events, and your weekly life.</p></article>
+            <article><h3>Do I need to be professionally successful?</h3><p>No. Career status is not the test. Vantage is for men who have the means and commitment to invest in their personal life. We identify the changes with the highest impact, then help execute them across appearance, dating, friendships, venues, events, and your weekly life.</p></article>
             <article><h3>Should I hire a dating coach, a matchmaker, or Vantage?</h3><p>A coach usually focuses on skills, while a matchmaker focuses on introductions. Vantage works on the full picture and can be beside you in real life. <Link className="inline-link" href="/dating-coach-vs-matchmaker-los-angeles/">Compare the options</Link>.</p></article>
             <article><h3>Is it private?</h3><p>Yes. I work discreetly with a limited number of clients. Introductions, outings, specialists, and events are handled with care and good judgment.</p></article>
           </div>

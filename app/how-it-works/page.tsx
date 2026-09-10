@@ -25,7 +25,7 @@ export default function Page() {
     questions={[
       { question: 'How involved is Vantage?', answer: 'The level of involvement depends on the engagement. It can range from strategy and coordination to outings, introductions, specialist appointments, and private events.' },
       { question: 'Is there a standard program?', answer: 'No. There is no fixed course because clients have different strengths, schedules, locations, and goals.' },
-      { question: 'Who is the service designed for?', answer: 'Vantage is designed for accomplished adult men whose appearance, dating life, social circle, or lifestyle has not kept pace with the rest of their success.' },
+      { question: 'Who is the service designed for?', answer: 'Vantage is designed for adult men with the means and commitment to invest seriously in their appearance, dating life, social circle, and lifestyle. A particular career title or background is not required.' },
     ]}
     related={[
       { href: '/about/', label: 'About Vantage' },

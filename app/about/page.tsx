@@ -5,9 +5,9 @@ export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: 'About Vantage | Private Dating, Social and Lifestyle Advisory',
-  description: 'Vantage is a discreet, hands-on private advisory helping accomplished men improve their appearance, dating life, social network, lifestyle, and access.',
+  description: 'Vantage is a discreet, hands-on private advisory helping men improve their appearance, dating life, social network, lifestyle, and access.',
   alternates: { canonical: '/about/' },
-  openGraph: { title: 'About Vantage Private Advisory', description: 'A well-connected friend and private advisor for accomplished men in Southern California.', url: '/about/' },
+  openGraph: { title: 'About Vantage Private Advisory', description: 'A well-connected friend and private advisor for men with high standards in Southern California.', url: '/about/' },
 };
 
 export default function Page() {
@@ -15,7 +15,7 @@ export default function Page() {
     path="/about/"
     eyebrow="About Vantage"
     title="Private advisory that feels like having the right friend in your corner."
-    lead="Vantage helps accomplished men close the gap between their professional success and their appearance, dating life, friendships, social calendar, and personal confidence."
+    lead="Vantage helps men close the gap between the personal life they have and the appearance, dating life, friendships, social calendar, and confidence they want."
     serviceType="Private dating, social, and lifestyle advisory"
     sections={[
       { title: 'Why Vantage exists', paragraphs: ['Dating problems are rarely only about dating. How you look, how you feel, who you know, where you spend time, and how active your life is all affect the people you meet.', 'Vantage brings those pieces together under one personal relationship instead of sending you through disconnected courses and services.'] },
