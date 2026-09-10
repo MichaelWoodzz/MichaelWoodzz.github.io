@@ -82,7 +82,7 @@ export function AdvisoryDetailPage({
       <a className="skip-link" href="#main">Skip to content</a>
       <header className="site-header detail-header">
         <Link className="wordmark" href="/" aria-label="Vantage home">vantage<span>.</span></Link>
-        <nav aria-label="Main navigation"><Link href="/about/">About</Link><Link href="/#services">Services</Link><Link href="/#apply">Apply <ArrowUpRight size={15} aria-hidden="true" /></Link></nav>
+        <nav aria-label="Main navigation"><Link href="/about/">About</Link><Link href="/#services">What I do</Link><Link href="/#apply">Let’s talk <ArrowUpRight size={15} aria-hidden="true" /></Link></nav>
       </header>
 
       <main id="main" className="detail-page">
@@ -92,7 +92,7 @@ export function AdvisoryDetailPage({
             <p className="eyebrow">{eyebrow}</p>
             <h1>{title}</h1>
             <p className="detail-lead">{lead}</p>
-            <Link className="primary-link" href="/#apply">Apply for Private Advisory <ArrowUpRight size={18} aria-hidden="true" /></Link>
+            <Link className="primary-link" href="/#apply">Get Vantage in your corner <ArrowUpRight size={18} aria-hidden="true" /></Link>
           </div>
         </section>
 
@@ -124,8 +124,8 @@ export function AdvisoryDetailPage({
         </div>
       </main>
 
-      <Link className="floating-apply" href="/#apply">Apply for Private Advisory <ArrowUpRight size={17} aria-hidden="true" /></Link>
-      <footer className="site-footer site-footer-expanded"><Link className="wordmark" href="/" aria-label="Vantage home">vantage<span>.</span></Link><nav className="footer-links" aria-label="Footer navigation"><Link href="/about/">About</Link><Link href="/how-it-works/">How it works</Link><Link href="/southern-california-service-area/">Service area</Link><Link href="/privacy/">Privacy</Link><Link href="/#apply">Apply</Link></nav><p>Los Angeles · Orange County · Ventura County</p><span>© {new Date().getFullYear()} Vantage</span></footer>
+      <Link className="floating-apply" href="/#apply">Get a wingman <ArrowUpRight size={17} aria-hidden="true" /></Link>
+      <footer className="site-footer site-footer-expanded"><Link className="wordmark" href="/" aria-label="Vantage home">vantage<span>.</span></Link><nav className="footer-links" aria-label="Footer navigation"><Link href="/about/">About</Link><Link href="/how-it-works/">How it works</Link><Link href="/southern-california-service-area/">Where I work</Link><Link href="/privacy/">Privacy</Link><Link href="/#apply">Let’s talk</Link></nav><p>Los Angeles · Orange County · Ventura County</p><span>© {new Date().getFullYear()} Vantage</span></footer>
     </>
   );
 }

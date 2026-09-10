@@ -117,9 +117,9 @@ export function InquiryForm() {
   return (
     <form className="inquiry inquiry-full" onSubmit={handleSubmit}>
       <div className="inquiry-heading">
-        <p className="inquiry-kicker">Private and confidential</p>
-        <h3>Tell me where you are now and what you want to change.</h3>
-        <p>I personally review every application. Your answers are never displayed publicly.</p>
+        <p className="inquiry-kicker">Just between us</p>
+        <h3>Give me the honest version.</h3>
+        <p>I read every message myself. Your answers stay private.</p>
       </div>
 
       <div className="application-progress" aria-label={`Application step ${step} of 2`}>
@@ -154,8 +154,8 @@ export function InquiryForm() {
           </div>
         </fieldset>
         <div className="inquiry-wide first-step-action">
-          <button className="primary-link inquiry-submit" type="button" onClick={continueApplication}>Continue <ArrowUpRight size={18} aria-hidden="true" /></button>
-          <p>No commitment. This simply helps me understand whether Vantage may be useful.</p>
+          <button className="primary-link inquiry-submit" type="button" onClick={continueApplication}>Keep going <ArrowUpRight size={18} aria-hidden="true" /></button>
+          <p>No commitment. This just helps me understand what is going on.</p>
         </div>
       </div>}
 
@@ -181,11 +181,11 @@ export function InquiryForm() {
       {step === 2 && <div className="final-step-actions">
         <button className="inquiry-back" type="button" onClick={() => setStep(1)}>Back to the basics</button>
         <button className="primary-link inquiry-submit" type="submit">
-          Send Private Application <ArrowUpRight size={18} aria-hidden="true" />
+          Send it to me <ArrowUpRight size={18} aria-hidden="true" />
         </button>
         <p className="inquiry-hint">This opens your email app with your confidential application ready to send.</p>
       </div>}
-      <p className="inquiry-email-fallback">Prefer a direct introduction? Email <a href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Private Vantage inquiry')}`}>{CONTACT_EMAIL}</a></p>
+      <p className="inquiry-email-fallback">Want to skip the form? Email me directly at <a href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Private Vantage inquiry')}`}>{CONTACT_EMAIL}</a></p>
     </form>
   );
 }

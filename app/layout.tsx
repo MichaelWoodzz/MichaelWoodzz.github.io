@@ -6,8 +6,8 @@ import { publicAsset, siteUrl } from '@/lib/site-config';
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: 'Vantage | The Ultimate Private Wingman in Los Angeles',
-  description: 'Look your best, date with confidence, build an amazing social life, go out with hands-on support, and host private events across Los Angeles, Orange County, and Ventura County.',
+  title: 'Vantage | Your Private Wingman in Los Angeles',
+  description: 'A real-life private wingman to help you look better, date better, go out more, meet the right people, and build an amazing social life across Southern California.',
   applicationName: 'Vantage',
   creator: 'Vantage',
   publisher: 'Vantage',
@@ -19,14 +19,14 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: '/',
     siteName: 'Vantage',
-    title: 'Vantage | The Ultimate Private Wingman in Los Angeles',
-    description: 'A discreet, hands-on private wingman helping men look their best, date better, expand their social lives, and host memorable events.',
+    title: 'Vantage | Your Private Wingman in Los Angeles',
+    description: 'Look better, go out more, meet the right people, and build an amazing social life with a well-connected friend in your corner.',
     images: [{ url: '/vantage-coastal-hero.png', width: 1536, height: 1024, alt: 'Vantage private dating and social advisory in Southern California' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Vantage | The Ultimate Private Wingman in Los Angeles',
-    description: 'Look your best, date better, build an amazing social life, and get hands-on support across Southern California.',
+    title: 'Vantage | Your Private Wingman in Los Angeles',
+    description: 'Look better, go out more, meet the right people, and build an amazing social life with a well-connected friend in your corner.',
     images: ['/vantage-coastal-hero.png'],
   },
   robots: {
