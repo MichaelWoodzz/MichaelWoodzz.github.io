@@ -77,23 +77,30 @@ export default function Home() {
       <a className="skip-link" href="#main">Skip to content</a>
       <header className="site-header">
         <Link className="wordmark" href="/" aria-label="Vantage home">vantage<span>.</span></Link>
-        <nav aria-label="Main navigation"><a href="#advisory">How it works</a><a href="#services">Services</a><a href="#apply">Apply <ArrowUpRight size={15} aria-hidden="true" /></a></nav>
+        <nav aria-label="Main navigation"><a href="#fit">Who it is for</a><a href="#services">What changes</a><a href="#process">How it works</a><a href="#apply">Apply <ArrowUpRight size={15} aria-hidden="true" /></a></nav>
       </header>
 
       <main id="main">
         <section className="hero" aria-labelledby="hero-title">
           <div className="hero-copy">
-            <p className="eyebrow"><span className="small-rule" /> The ultimate private wingman</p>
+            <p className="eyebrow"><span className="small-rule" /> Private dating, social & image advisory</p>
             <p className="availability"><span aria-hidden="true" /> Now accepting private client applications</p>
-            <h1 id="hero-title">Look your absolute best.<br /><em>Build an amazing social life.</em></h1>
-            <p className="hero-description">I help you look your best, meet more people, build a great social life, and become more confident—with the support of a well-connected friend beside you.</p>
-            <a className="primary-link" href="#apply">Apply for Private Advisory <ArrowUpRight size={20} aria-hidden="true" /></a>
+            <h1 id="hero-title">Look better. Meet more people.<br /><em>Build the life you want.</em></h1>
+            <p className="hero-description">One private advisor to improve how you look, how you date, where you go, who you know, and how your social life actually feels.</p>
+            <div className="hero-actions"><a className="primary-link" href="#apply">Apply for Private Advisory <ArrowUpRight size={20} aria-hidden="true" /></a><a className="hero-text-link" href="#advisory">See how Vantage works</a></div>
             <div className="hero-bottom"><span>Selective · Discreet · Southern California</span><a href="#apply" aria-label="Go to the private advisory application"><ArrowDown size={20} aria-hidden="true" /></a></div>
           </div>
           <figure className="hero-image">
             <Image src={publicAsset('/vantage-coastal-hero.webp')} alt="A man overlooking the Southern California coast" width="1536" height="1024" priority />
             <figcaption><span>Look better. Go out. Live better.</span><span>V / 01</span></figcaption>
           </figure>
+        </section>
+
+        <section className="outcome-strip" aria-label="Vantage outcomes">
+          <div><span>01</span><strong>Look your best</strong><small>Hair, skin, physique, grooming and style</small></div>
+          <div><span>02</span><strong>Date with confidence</strong><small>Profiles, conversation, strategy and feedback</small></div>
+          <div><span>03</span><strong>Build a real social life</strong><small>Better friends, places, plans and access</small></div>
+          <div><span>04</span><strong>Have someone beside you</strong><small>Outings, introductions, dinners and events</small></div>
         </section>
 
         <section className="approach section-shell" id="advisory" aria-labelledby="approach-title">
@@ -103,6 +110,16 @@ export default function Home() {
             <div className="approach-text"><p>You work directly with me. I get to know you, help you make the right changes, go out with you, organize plans, and become part of the process in a natural way. It feels more like having a trusted friend and ultimate wingman than hiring a coach.</p><p>I have a vast network across Los Angeles and Southern California, including the social, creative, hospitality, fitness, fashion, and entertainment worlds. When the fit and circumstances are right, that network can create organic opportunities to meet influencers, models, celebrities, and other interesting people.</p></div>
             <p className="mandate-line">This is not coaching or matchmaking. It is a category of its own: personal, organic, and built around your real life.</p>
           </div>
+        </section>
+
+        <section className="fit section-shell" id="fit" aria-labelledby="fit-title">
+          <div className="fit-heading"><p className="eyebrow">Is Vantage for you?</p><h2 id="fit-title">Your personal life should feel as considered as everything else.</h2></div>
+          <div className="fit-grid">
+            <article><span>01</span><h3>You know something is missing.</h3><p>You may have money, freedom, taste, or ambition, but your appearance, dating life, friendships, or calendar do not reflect the life you want.</p></article>
+            <article><span>02</span><h3>You want real involvement.</h3><p>You are looking for someone who can make plans, coordinate experts, go out with you, give honest feedback, and help execute—not another course to complete alone.</p></article>
+            <article><span>03</span><h3>You are ready to act.</h3><p>You have the means and commitment to make meaningful changes. Your job title and background do not matter; discretion, openness, and follow-through do.</p></article>
+          </div>
+          <a className="primary-link fit-cta" href="#apply">Tell me what you want to change <ArrowUpRight size={18} aria-hidden="true" /></a>
         </section>
 
         <section className="consulting section-shell" id="services" aria-labelledby="consulting-title">
@@ -134,8 +151,18 @@ export default function Home() {
           <div className="local-details"><p>I help position you around the adult women and social world you are genuinely interested in—from age and interests to values and lifestyle.</p><div className="local-areas" aria-label="Service areas"><span>Los Angeles County</span><span>Orange County</span><span>Ventura County</span><span>Selective travel</span></div><p>We turn that into a practical plan for where you go, how you present yourself, who you meet, and what you do each week.</p><p className="local-emphasis">The right places. The right people. A better social life.</p></div>
         </section>
 
+        <section className="process-conversion section-shell" id="process" aria-labelledby="process-title">
+          <div className="section-heading"><p className="eyebrow">06 / How it starts</p><h2 id="process-title">A private conversation.<br /><em>Then a plan built around you.</em></h2><p>No generic curriculum. No pressure to fit a package before we understand the problem.</p></div>
+          <div className="process-steps">
+            <article><span>01</span><div><h3>Send a private application</h3><p>Tell me where you are now, what feels missing, and what you want your dating and social life to become.</p></div></article>
+            <article><span>02</span><div><h3>We decide whether the fit is right</h3><p>I personally review the application. If Vantage can materially help, we arrange a confidential conversation.</p></div></article>
+            <article><span>03</span><div><h3>We identify the first moves</h3><p>We determine the highest-impact changes and the right level of hands-on support, specialists, outings, and social planning.</p></div></article>
+          </div>
+          <a className="primary-link" href="#apply">Start your application <ArrowUpRight size={18} aria-hidden="true" /></a>
+        </section>
+
         <section className="faq section-shell" aria-labelledby="faq-title">
-          <div className="section-heading"><p className="eyebrow">06 / Simply explained</p><h2 id="faq-title">Personal help<br /><em>that fits your real life.</em></h2><p>For men with high standards who want a better personal and social life.</p></div>
+          <div className="section-heading"><p className="eyebrow">07 / Straight answers</p><h2 id="faq-title">Personal help<br /><em>that fits your real life.</em></h2><p>For men with high standards who want a better personal and social life.</p></div>
           <div className="faq-list">
             <article><h3>What exactly do you do?</h3><p>I help you look your best, improve your confidence, strengthen your dating profiles, build your social circle, find better places to go, join you on outings, and throw events that bring people together.</p></article>
             <article><h3>Is this matchmaking?</h3><p>No. I do not sell introductions or arrange dates from a database. I help you build a better life and social world, then use my network when a natural, appropriate opportunity arises.</p></article>

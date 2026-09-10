@@ -41,6 +41,7 @@ const initialState: FormState = {
 
 export function InquiryForm() {
   const [data, setData] = useState<FormState>(initialState);
+  const [step, setStep] = useState<1 | 2>(1);
 
   useEffect(() => {
     try {
@@ -68,6 +69,13 @@ export function InquiryForm() {
         ? previous.services.filter((item) => item !== service)
         : [...previous.services, service],
     }));
+  };
+
+  const continueApplication = () => {
+    const firstStep = document.querySelector<HTMLFormElement>('.inquiry');
+    if (!firstStep?.reportValidity()) return;
+    setStep(2);
+    requestAnimationFrame(() => firstStep.scrollIntoView({ behavior: 'smooth', block: 'start' }));
   };
 
   const handleSubmit = (event: SyntheticEvent<HTMLFormElement>) => {
@@ -111,10 +119,15 @@ export function InquiryForm() {
       <div className="inquiry-heading">
         <p className="inquiry-kicker">Private and confidential</p>
         <h3>Tell me where you are now and what you want to change.</h3>
-        <p>I personally review every application.</p>
+        <p>I personally review every application. Your answers are never displayed publicly.</p>
       </div>
 
-      <div className="inquiry-grid">
+      <div className="application-progress" aria-label={`Application step ${step} of 2`}>
+        <div className={step >= 1 ? 'active' : ''}><span>1</span><p><strong>The basics</strong><small>About one minute</small></p></div>
+        <div className={step >= 2 ? 'active' : ''}><span>2</span><p><strong>What you want</strong><small>A few honest answers</small></p></div>
+      </div>
+
+      {step === 1 && <div className="inquiry-grid">
         <div className="inquiry-field">
           <label htmlFor="full-name">Full name</label>
           <input id="full-name" className="inquiry-input" type="text" autoComplete="name" required value={data.name} onChange={(event) => update('name', event.target.value)} />
@@ -140,7 +153,13 @@ export function InquiryForm() {
             ))}
           </div>
         </fieldset>
+        <div className="inquiry-wide first-step-action">
+          <button className="primary-link inquiry-submit" type="button" onClick={continueApplication}>Continue <ArrowUpRight size={18} aria-hidden="true" /></button>
+          <p>No commitment. This simply helps me understand whether Vantage may be useful.</p>
+        </div>
+      </div>}
 
+      {step === 2 && <div className="inquiry-grid">
         <div className="inquiry-field inquiry-wide">
           <label htmlFor="current-life">Tell me about your dating and social life right now.</label>
           <textarea id="current-life" className="inquiry-textarea" rows={4} required placeholder="What is working, what is not, and what does a normal week look like?" value={data.currentLife} onChange={(event) => update('currentLife', event.target.value)} />
@@ -157,13 +176,16 @@ export function InquiryForm() {
           <label htmlFor="anything-else">Anything else you want me to know? <span>(optional)</span></label>
           <textarea id="anything-else" className="inquiry-textarea" rows={3} value={data.anythingElse} onChange={(event) => update('anythingElse', event.target.value)} />
         </div>
-      </div>
+      </div>}
 
-      <button className="primary-link inquiry-submit" type="submit">
-        Apply for Private Advisory <ArrowUpRight size={18} aria-hidden="true" />
-      </button>
-      <p className="inquiry-hint">This opens your email app with your private application ready to send.</p>
-      <p className="inquiry-email-fallback">Prefer to write directly? <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></p>
+      {step === 2 && <div className="final-step-actions">
+        <button className="inquiry-back" type="button" onClick={() => setStep(1)}>Back to the basics</button>
+        <button className="primary-link inquiry-submit" type="submit">
+          Send Private Application <ArrowUpRight size={18} aria-hidden="true" />
+        </button>
+        <p className="inquiry-hint">This opens your email app with your confidential application ready to send.</p>
+      </div>}
+      <p className="inquiry-email-fallback">Prefer a direct introduction? Email <a href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Private Vantage inquiry')}`}>{CONTACT_EMAIL}</a></p>
     </form>
   );
 }
