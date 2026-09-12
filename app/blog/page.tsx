@@ -25,13 +25,13 @@ export default function BlogIndex() {
   return <>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, '\\u003c') }} />
     <a className="skip-link" href="#main">Skip to content</a>
-    <header className="site-header detail-header"><Link className="wordmark" href="/">vantage<span>.</span></Link><nav><Link href="/about/">About</Link><Link href="/#services">What I do</Link><Link href="/#apply">Let’s talk <ArrowUpRight size={15} /></Link></nav></header>
+    <header className="site-header detail-header"><Link className="wordmark" href="/">vantage<span>.</span></Link><nav aria-label="Main navigation"><Link href="/about/">About</Link><Link href="/services/">Services</Link><Link href="/blog/" aria-current="page">Field Notes</Link><Link href="/#apply">Let’s talk <ArrowUpRight size={15} aria-hidden="true" /></Link></nav></header>
     <main id="main" className="blog-index">
       <header className="blog-hero"><Link className="back-link" href="/"><ArrowLeft size={15} /> Vantage</Link><p className="eyebrow">Field Notes</p><h1>Straightforward advice for a better dating and social life.</h1><p>No pickup scripts. No vague motivation. Practical thinking about how you look, where you go, who you know, and how you show up.</p></header>
       <section className="blog-grid" aria-label="Vantage articles">{blogPosts.map((post, index) => <article key={post.slug}><p className="blog-card-meta"><span>{post.category}</span><span>{post.readingTime}</span></p><span className="blog-card-number">{String(index + 1).padStart(2, '0')}</span><h2><Link href={`/blog/${post.slug}/`}>{post.title}</Link></h2><p>{post.description}</p><Link className="blog-read" href={`/blog/${post.slug}/`}>Read the guide <ArrowUpRight size={15} /></Link></article>)}</section>
       <section className="blog-closing"><p className="eyebrow">Need more than an article?</p><h2>A guide can point you in the right direction. A wingman can go with you.</h2><Link className="primary-link" href="/#apply">Get Vantage in your corner <ArrowUpRight size={18} /></Link></section>
     </main>
     <Link className="floating-apply" href="/#apply">Get a wingman <ArrowUpRight size={17} /></Link>
-    <footer className="site-footer site-footer-expanded"><Link className="wordmark" href="/">vantage<span>.</span></Link><nav className="footer-links"><Link href="/about/">About</Link><Link href="/how-it-works/">How it works</Link><Link href="/privacy/">Privacy</Link><Link href="/#apply">Let’s talk</Link></nav><p>Los Angeles · Orange County · Ventura County</p><span>© {new Date().getFullYear()} Vantage</span></footer>
+    <footer className="site-footer site-footer-expanded"><Link className="wordmark" href="/">vantage<span>.</span></Link><nav className="footer-links" aria-label="Footer navigation"><Link href="/about/">About</Link><Link href="/services/">Services</Link><Link href="/blog/">Field Notes</Link><Link href="/privacy/">Privacy</Link><Link href="/#apply">Let’s talk</Link></nav><p>Los Angeles · Orange County · Ventura County</p><span>© {new Date().getFullYear()} Vantage</span></footer>
   </>;
 }

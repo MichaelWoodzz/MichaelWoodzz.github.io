@@ -13,6 +13,7 @@ const blogPosts = [
 const pages = [
   ['/', '1.0'],
   ['/about/', '0.8'],
+  ['/services/', '0.9'],
   ['/how-it-works/', '0.85'],
   ['/private-dating-advisor-los-angeles/', '0.9'],
   ['/dating-coach-vs-matchmaker-los-angeles/', '0.85'],
