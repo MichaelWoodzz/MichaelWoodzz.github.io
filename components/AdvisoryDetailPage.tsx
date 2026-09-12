@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import { ArrowLeft, ArrowUpRight } from 'lucide-react';
+import { SiteLink } from '@/components/SiteLink';
 import { siteUrl } from '@/lib/site-config';
 
 type ContentSection = {
@@ -79,20 +79,20 @@ export function AdvisoryDetailPage({
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, '\\u003c') }} />
-      <a className="skip-link" href="#main">Skip to content</a>
+      <SiteLink className="skip-link" href="#main">Skip to content</SiteLink>
       <header className="site-header detail-header">
-        <Link className="wordmark" href="/" aria-label="Vantage home">vantage<span>.</span></Link>
-        <nav aria-label="Main navigation"><Link href="/about/">About</Link><Link href="/services/">Services</Link><Link href="/blog/">Field Notes</Link><Link href="/#apply">Let’s talk <ArrowUpRight size={15} aria-hidden="true" /></Link></nav>
+        <SiteLink className="wordmark" href="/" aria-label="Vantage home">vantage<span>.</span></SiteLink>
+        <nav aria-label="Main navigation"><SiteLink href="/about/">About</SiteLink><SiteLink href="/services/">Services</SiteLink><SiteLink href="/blog/">Field Notes</SiteLink><SiteLink href="/#apply">Let’s talk <ArrowUpRight size={15} aria-hidden="true" /></SiteLink></nav>
       </header>
 
       <main id="main" className="detail-page">
         <section className="detail-hero">
           <div>
-            <Link className="back-link" href="/"><ArrowLeft size={15} aria-hidden="true" /> Vantage</Link>
+            <SiteLink className="back-link" href="/"><ArrowLeft size={15} aria-hidden="true" /> Vantage</SiteLink>
             <p className="eyebrow">{eyebrow}</p>
             <h1>{title}</h1>
             <p className="detail-lead">{lead}</p>
-            <Link className="primary-link" href="/#apply">Get Vantage in your corner <ArrowUpRight size={18} aria-hidden="true" /></Link>
+            <SiteLink className="primary-link" href="/#apply">Get Vantage in your corner <ArrowUpRight size={18} aria-hidden="true" /></SiteLink>
           </div>
         </section>
 
@@ -119,13 +119,13 @@ export function AdvisoryDetailPage({
           <section className="related-pages" aria-labelledby="related-title">
             <p className="eyebrow">Explore Vantage</p>
             <h2 id="related-title">Related private advisory services</h2>
-            <div>{related.map((item) => <Link key={item.href} href={item.href}>{item.label}<ArrowUpRight size={15} aria-hidden="true" /></Link>)}</div>
+            <div>{related.map((item) => <SiteLink key={item.href} href={item.href}>{item.label}<ArrowUpRight size={15} aria-hidden="true" /></SiteLink>)}</div>
           </section>
         </div>
       </main>
 
-      <Link className="floating-apply" href="/#apply">Get a wingman <ArrowUpRight size={17} aria-hidden="true" /></Link>
-      <footer className="site-footer site-footer-expanded"><Link className="wordmark" href="/" aria-label="Vantage home">vantage<span>.</span></Link><nav className="footer-links" aria-label="Footer navigation"><Link href="/about/">About</Link><Link href="/services/">Services</Link><Link href="/blog/">Field Notes</Link><Link href="/how-it-works/">How it works</Link><Link href="/southern-california-service-area/">Where I work</Link><Link href="/privacy/">Privacy</Link><Link href="/#apply">Let’s talk</Link></nav><p>Los Angeles · Orange County · Ventura County</p><span>© {new Date().getFullYear()} Vantage</span></footer>
+      <SiteLink className="floating-apply" href="/#apply">Get a wingman <ArrowUpRight size={17} aria-hidden="true" /></SiteLink>
+      <footer className="site-footer site-footer-expanded"><SiteLink className="wordmark" href="/" aria-label="Vantage home">vantage<span>.</span></SiteLink><nav className="footer-links" aria-label="Footer navigation"><SiteLink href="/about/">About</SiteLink><SiteLink href="/services/">Services</SiteLink><SiteLink href="/blog/">Field Notes</SiteLink><SiteLink href="/how-it-works/">How it works</SiteLink><SiteLink href="/southern-california-service-area/">Where I work</SiteLink><SiteLink href="/privacy/">Privacy</SiteLink><SiteLink href="/#apply">Let’s talk</SiteLink></nav><p>Los Angeles · Orange County · Ventura County</p><span>© {new Date().getFullYear()} Vantage</span></footer>
     </>
   );
 }

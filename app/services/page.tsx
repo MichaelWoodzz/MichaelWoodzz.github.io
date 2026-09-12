@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { ArrowLeft, ArrowUpRight } from 'lucide-react';
 import { siteUrl } from '@/lib/site-config';
+import { SiteLink } from '@/components/SiteLink';
 
 export const dynamic = 'force-static';
 export const metadata: Metadata = {
@@ -24,14 +24,14 @@ export default function ServicesPage() {
   const structuredData = { '@context': 'https://schema.org', '@type': 'ItemList', name: 'Vantage private wingman services', url: `${siteUrl}/services/`, itemListElement: services.map((service, index) => ({ '@type': 'ListItem', position: index + 1, name: service.title, url: `${siteUrl}${service.href}` })) };
   return <>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, '\\u003c') }} />
-    <a className="skip-link" href="#main">Skip to content</a>
-    <header className="site-header detail-header"><Link className="wordmark" href="/">vantage<span>.</span></Link><nav aria-label="Main navigation"><Link href="/about/">About</Link><Link href="/services/" aria-current="page">Services</Link><Link href="/blog/">Field Notes</Link><Link href="/#apply">Let’s talk <ArrowUpRight size={15} aria-hidden="true" /></Link></nav></header>
+    <SiteLink className="skip-link" href="#main">Skip to content</SiteLink>
+    <header className="site-header detail-header"><SiteLink className="wordmark" href="/">vantage<span>.</span></SiteLink><nav aria-label="Main navigation"><SiteLink href="/about/">About</SiteLink><SiteLink href="/services/" aria-current="page">Services</SiteLink><SiteLink href="/blog/">Field Notes</SiteLink><SiteLink href="/#apply">Let’s talk <ArrowUpRight size={15} aria-hidden="true" /></SiteLink></nav></header>
     <main id="main" className="services-index">
-      <header className="services-hero"><Link className="back-link" href="/"><ArrowLeft size={15} aria-hidden="true" /> Vantage</Link><p className="eyebrow">What I do</p><h1>One wingman.<br /><em>Every part of your social life.</em></h1><p>We start with whatever is holding you back most. Then we work outward—from how you look and date to where you go, who you know, and what your week actually feels like.</p></header>
-      <section className="services-directory" aria-label="Vantage services">{services.map((service) => <article key={service.href}><span>{service.number}</span><div><h2>{service.title}</h2><p>{service.text}</p><Link href={service.href}>{service.link} <ArrowUpRight size={16} aria-hidden="true" /></Link></div></article>)}</section>
-      <section className="services-callout"><p className="eyebrow">Every situation is different</p><h2>You do not need to know which service you need.</h2><p>Tell me what is happening and what you want to change. I will help identify the first move.</p><Link className="primary-link" href="/#apply">Get Vantage in your corner <ArrowUpRight size={18} aria-hidden="true" /></Link></section>
+      <header className="services-hero"><SiteLink className="back-link" href="/"><ArrowLeft size={15} aria-hidden="true" /> Vantage</SiteLink><p className="eyebrow">What I do</p><h1>One wingman.<br /><em>Every part of your social life.</em></h1><p>We start with whatever is holding you back most. Then we work outward—from how you look and date to where you go, who you know, and what your week actually feels like.</p></header>
+      <section className="services-directory" aria-label="Vantage services">{services.map((service) => <article key={service.href}><span>{service.number}</span><div><h2>{service.title}</h2><p>{service.text}</p><SiteLink href={service.href}>{service.link} <ArrowUpRight size={16} aria-hidden="true" /></SiteLink></div></article>)}</section>
+      <section className="services-callout"><p className="eyebrow">Every situation is different</p><h2>You do not need to know which service you need.</h2><p>Tell me what is happening and what you want to change. I will help identify the first move.</p><SiteLink className="primary-link" href="/#apply">Get Vantage in your corner <ArrowUpRight size={18} aria-hidden="true" /></SiteLink></section>
     </main>
-    <Link className="floating-apply" href="/#apply">Get a wingman <ArrowUpRight size={17} aria-hidden="true" /></Link>
-    <footer className="site-footer site-footer-expanded"><Link className="wordmark" href="/">vantage<span>.</span></Link><nav className="footer-links" aria-label="Footer navigation"><Link href="/about/">About</Link><Link href="/services/">Services</Link><Link href="/blog/">Field Notes</Link><Link href="/privacy/">Privacy</Link><Link href="/#apply">Let’s talk</Link></nav><p>Los Angeles · Orange County · Ventura County</p><span>© {new Date().getFullYear()} Vantage</span></footer>
+    <SiteLink className="floating-apply" href="/#apply">Get a wingman <ArrowUpRight size={17} aria-hidden="true" /></SiteLink>
+    <footer className="site-footer site-footer-expanded"><SiteLink className="wordmark" href="/">vantage<span>.</span></SiteLink><nav className="footer-links" aria-label="Footer navigation"><SiteLink href="/about/">About</SiteLink><SiteLink href="/services/">Services</SiteLink><SiteLink href="/blog/">Field Notes</SiteLink><SiteLink href="/privacy/">Privacy</SiteLink><SiteLink href="/#apply">Let’s talk</SiteLink></nav><p>Los Angeles · Orange County · Ventura County</p><span>© {new Date().getFullYear()} Vantage</span></footer>
   </>;
 }
