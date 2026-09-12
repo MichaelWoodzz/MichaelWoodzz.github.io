@@ -1,0 +1,25 @@
+import type { Metadata } from 'next';
+import { BlogPostPage } from '@/components/BlogPostPage';
+import { blogPosts } from '@/lib/blog';
+
+const post = blogPosts[2];
+export const dynamic = 'force-static';
+export const metadata: Metadata = { title: `${post.title} | Vantage`, description: post.description, alternates: { canonical: `/blog/${post.slug}/` }, openGraph: { title: post.title, description: post.description, url: `/blog/${post.slug}/`, type: 'article', publishedTime: post.publishedIso } };
+
+export default function Page() {
+  return <BlogPostPage {...post}
+    intro={[
+      'Your dating-profile photos are not a beauty contest. They are evidence. In a few seconds, they answer whether you look like your profile, whether your life seems enjoyable, whether you take care of yourself, and whether meeting you feels comfortable.',
+      'The strongest photo set is accurate, current, visually varied, and easy to understand. It does not need a sports car, a tuxedo, or six professionally lit portraits. It needs one clear version of your face and several believable glimpses of your real life.',
+    ]}
+    sections={[
+      { heading: 'Start with the job each photo must do', paragraphs: ['Every image should add information. If three photos communicate the same outfit, angle, and mood, two of them are wasted. Think of the set as a sequence: identity, full presentation, lifestyle, social context, personality, and one additional dimension that matters to you.', 'Before taking anything new, audit what you already have. Remove outdated photos, confusing group shots, images with former partners cropped out, heavy filters, and pictures that only prove you once visited a landmark.'], points: ['A clear first photo', 'A current full-body image', 'An activity or interest', 'A believable social photo', 'A dressed-up or evening look', 'One image with genuine personality'] },
+      { heading: 'Make the first photo effortless to understand', paragraphs: ['Your first image should show your face clearly, without sunglasses, a hat, a distant crop, or another person competing for attention. Use soft daylight or open shade, keep the background simple, and look approachable.', 'Choose the expression that resembles you on a good day. A natural smile often communicates more confidence than a forced serious face. The goal is recognition and ease: someone should know exactly who they would be meeting.'] },
+      { heading: 'Show your actual shape and style', paragraphs: ['Include at least one photograph that shows how your clothes fit and how you carry yourself. Stand naturally, use a clean silhouette, and wear something you would genuinely wear on a good date. Fit and posture matter more than a visible logo.', 'Do not hide behind oversized layers in every image, but do not use a shirtless photo unless the environment makes it completely natural. A beach, pool, or sport can make sense. A bathroom mirror usually communicates something else.'] },
+      { heading: 'Use lifestyle photos that can start a conversation', paragraphs: ['An activity photo works when it reveals something real and your face is still visible. Cooking for friends, playing a sport, attending a cultural event, traveling with context, or spending time with a pet can all create an easy opening.', 'Avoid staged props that exist only for the camera. People notice when a picture is performing a lifestyle rather than showing one. The best preparation for better lifestyle photos is often building a more active life first.'] },
+      { heading: 'Handle social proof carefully', paragraphs: ['One group photo can show that you have friends and enjoy other people. It should be obvious which person you are, and everyone in the image should look comfortable being there. Put it later in the sequence.', 'Do not use images that rely on proximity to attractive women, celebrities, or exclusive venues to manufacture status. That can feel insecure and raises questions you do not want the viewer asking. Let the photo show warmth, context, and belonging.'] },
+      { heading: 'Plan a shoot that does not look like a shoot', paragraphs: ['A useful session covers two or three nearby settings, several outfits, and different times of day. In Los Angeles, one compact neighborhood can provide a café, a walkable street, a quieter architectural background, and an evening location without spending hours in traffic.', 'Bring clothes that already fit, schedule grooming beforehand, and photograph real movement between posed frames. The candid-looking images usually come from good preparation, not luck.'] },
+      { heading: 'Edit for truth, then test the sequence', paragraphs: ['Correct exposure, color, and a temporary blemish if necessary. Do not reshape your body, rebuild your face, or edit the image until meeting you feels like a reveal. Accuracy is part of confidence.', 'Review the final set as a stranger would. Is your face immediately clear? Do the photos look recent? Does each one add information? Would the person in the pictures feel consistent on a first date? If yes, the profile has done its job.'] },
+    ]}
+  />;
+}

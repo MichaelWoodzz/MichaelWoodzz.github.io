@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { publicAsset, siteUrl } from '@/lib/site-config';
 import { InquiryForm } from '@/components/InquiryForm';
+import { blogPosts } from '@/lib/blog';
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -77,7 +78,7 @@ export default function Home() {
       <a className="skip-link" href="#main">Skip to content</a>
       <header className="site-header">
         <Link className="wordmark" href="/" aria-label="Vantage home">vantage<span>.</span></Link>
-        <nav aria-label="Main navigation"><a href="#fit">Who it is for</a><a href="#services">What changes</a><a href="#process">How it works</a><a href="#apply">Let’s talk <ArrowUpRight size={15} aria-hidden="true" /></a></nav>
+        <nav aria-label="Main navigation"><a href="#fit">Who it is for</a><a href="#services">What changes</a><Link href="/blog/">Field Notes</Link><a href="#apply">Let’s talk <ArrowUpRight size={15} aria-hidden="true" /></a></nav>
       </header>
 
       <main id="main">
@@ -173,6 +174,12 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="home-blog section-shell" aria-labelledby="home-blog-title">
+          <div className="section-heading"><p className="eyebrow">08 / Field notes</p><h2 id="home-blog-title">Useful advice.<br /><em>No pickup nonsense.</em></h2><p>Practical guides for improving your dating life, appearance, and social world in Los Angeles.</p></div>
+          <div className="home-blog-grid">{blogPosts.slice(0, 3).map((post, index) => <article key={post.slug}><span>{String(index + 1).padStart(2, '0')} / {post.category}</span><h3><Link href={`/blog/${post.slug}/`}>{post.title}</Link></h3><p>{post.description}</p><Link href={`/blog/${post.slug}/`}>Read the guide <ArrowUpRight size={15} aria-hidden="true" /></Link></article>)}</div>
+          <Link className="all-notes-link" href="/blog/">See all field notes <ArrowUpRight size={16} aria-hidden="true" /></Link>
+        </section>
+
         <section className="application-section section-shell" id="apply" aria-labelledby="apply-title">
           <div className="application-intro">
             <p className="eyebrow">Start a private conversation</p>
@@ -185,7 +192,7 @@ export default function Home() {
       </main>
 
       <a className="floating-apply" href="#apply">Get a wingman <ArrowUpRight size={17} aria-hidden="true" /></a>
-      <footer className="site-footer site-footer-expanded"><Link className="wordmark" href="/" aria-label="Vantage home">vantage<span>.</span></Link><nav className="footer-links" aria-label="Footer navigation"><Link href="/about/">About</Link><Link href="/how-it-works/">How it works</Link><Link href="/southern-california-service-area/">Service area</Link><Link href="/privacy/">Privacy</Link><a href="#apply">Let’s talk</a></nav><p>Los Angeles · Orange County · Ventura County</p><span>© {new Date().getFullYear()} Vantage</span></footer>
+      <footer className="site-footer site-footer-expanded"><Link className="wordmark" href="/" aria-label="Vantage home">vantage<span>.</span></Link><nav className="footer-links" aria-label="Footer navigation"><Link href="/blog/">Field Notes</Link><Link href="/about/">About</Link><Link href="/how-it-works/">How it works</Link><Link href="/southern-california-service-area/">Service area</Link><Link href="/privacy/">Privacy</Link><a href="#apply">Let’s talk</a></nav><p>Los Angeles · Orange County · Ventura County</p><span>© {new Date().getFullYear()} Vantage</span></footer>
     </>
   );
 }

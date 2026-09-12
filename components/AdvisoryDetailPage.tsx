@@ -82,7 +82,7 @@ export function AdvisoryDetailPage({
       <a className="skip-link" href="#main">Skip to content</a>
       <header className="site-header detail-header">
         <Link className="wordmark" href="/" aria-label="Vantage home">vantage<span>.</span></Link>
-        <nav aria-label="Main navigation"><Link href="/about/">About</Link><Link href="/#services">What I do</Link><Link href="/#apply">Let’s talk <ArrowUpRight size={15} aria-hidden="true" /></Link></nav>
+        <nav aria-label="Main navigation"><Link href="/blog/">Field Notes</Link><Link href="/#services">What I do</Link><Link href="/#apply">Let’s talk <ArrowUpRight size={15} aria-hidden="true" /></Link></nav>
       </header>
 
       <main id="main" className="detail-page">
@@ -125,7 +125,7 @@ export function AdvisoryDetailPage({
       </main>
 
       <Link className="floating-apply" href="/#apply">Get a wingman <ArrowUpRight size={17} aria-hidden="true" /></Link>
-      <footer className="site-footer site-footer-expanded"><Link className="wordmark" href="/" aria-label="Vantage home">vantage<span>.</span></Link><nav className="footer-links" aria-label="Footer navigation"><Link href="/about/">About</Link><Link href="/how-it-works/">How it works</Link><Link href="/southern-california-service-area/">Where I work</Link><Link href="/privacy/">Privacy</Link><Link href="/#apply">Let’s talk</Link></nav><p>Los Angeles · Orange County · Ventura County</p><span>© {new Date().getFullYear()} Vantage</span></footer>
+      <footer className="site-footer site-footer-expanded"><Link className="wordmark" href="/" aria-label="Vantage home">vantage<span>.</span></Link><nav className="footer-links" aria-label="Footer navigation"><Link href="/blog/">Field Notes</Link><Link href="/about/">About</Link><Link href="/how-it-works/">How it works</Link><Link href="/southern-california-service-area/">Where I work</Link><Link href="/privacy/">Privacy</Link><Link href="/#apply">Let’s talk</Link></nav><p>Los Angeles · Orange County · Ventura County</p><span>© {new Date().getFullYear()} Vantage</span></footer>
     </>
   );
 }
