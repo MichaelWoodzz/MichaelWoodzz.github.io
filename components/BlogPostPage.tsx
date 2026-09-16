@@ -53,7 +53,7 @@ export function BlogPostPage(props: BlogPostPageProps) {
     <SiteLink className="skip-link" href="#main">Skip to content</SiteLink>
     <header className="site-header detail-header">
       <SiteLink className="wordmark" href="/" aria-label="Vantage home">vantage<span>.</span></SiteLink>
-      <nav aria-label="Main navigation"><SiteLink href="/about/">About</SiteLink><SiteLink href="/services/">Services</SiteLink><SiteLink href="/blog/">Field Notes</SiteLink><SiteLink href="/#apply">Let’s talk <ArrowUpRight size={15} aria-hidden="true" /></SiteLink></nav>
+      <nav aria-label="Main navigation"><SiteLink href="/about/">About</SiteLink><SiteLink href="/services/">What I do</SiteLink><SiteLink href="/blog/">Field Notes</SiteLink><SiteLink href="/#apply">Let’s talk <ArrowUpRight size={15} aria-hidden="true" /></SiteLink></nav>
     </header>
     <main id="main" className="article-page">
       <article>
@@ -69,13 +69,13 @@ export function BlogPostPage(props: BlogPostPageProps) {
           <div className="article-body">
             <div className="article-intro">{props.intro.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
             {props.sections.map((section, index) => <section id={`article-${index}`} key={section.heading}><span className="article-number">{String(index + 1).padStart(2, '0')}</span><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}{section.points && <ul>{section.points.map((point) => <li key={point}>{point}</li>)}</ul>}</section>)}
-            <nav className="article-related" aria-label="Related Vantage services"><p>Related Vantage services</p><SiteLink href="/social-life-consulting-los-angeles/">Social life consulting</SiteLink><SiteLink href="/private-dating-advisor-los-angeles/">Private dating advisory</SiteLink><SiteLink href="/mens-image-consulting-los-angeles/">Men’s image consulting</SiteLink><SiteLink href="/private-wingman-los-angeles/">Private wingman support</SiteLink></nav>
-            <aside className="article-cta"><p className="eyebrow">Want help doing this in real life?</p><h2>Get a wingman in your corner.</h2><p>Vantage can help with the plan, the people, the places, and the follow-through—privately and hands-on across Southern California.</p><SiteLink className="primary-link" href="/#apply">Tell me what you need <ArrowUpRight size={18} aria-hidden="true" /></SiteLink></aside>
+            <nav className="article-related" aria-label="Related Vantage services"><p>Related Vantage services</p><SiteLink href="/social-life-consulting-los-angeles/">Social connections</SiteLink><SiteLink href="/private-dating-advisor-los-angeles/">Dating & connections</SiteLink><SiteLink href="/mens-image-consulting-los-angeles/">Image & personal rebranding</SiteLink><SiteLink href="/private-wingman-los-angeles/">Private wingman support</SiteLink></nav>
+            <aside className="article-cta"><p className="eyebrow">Want help doing this in real life?</p><h2>Let’s talk in your corner.</h2><p>I help with your image, the right people, and better nights out—personally, across Southern California.</p><SiteLink className="primary-link" href="/#apply">Tell me what you need <ArrowUpRight size={18} aria-hidden="true" /></SiteLink></aside>
           </div>
         </div>
       </article>
     </main>
-    <SiteLink className="floating-apply" href="/#apply">Get a wingman <ArrowUpRight size={17} aria-hidden="true" /></SiteLink>
-    <footer className="site-footer site-footer-expanded"><SiteLink className="wordmark" href="/">vantage<span>.</span></SiteLink><nav className="footer-links" aria-label="Footer navigation"><SiteLink href="/about/">About</SiteLink><SiteLink href="/services/">Services</SiteLink><SiteLink href="/blog/">Field Notes</SiteLink><SiteLink href="/privacy/">Privacy</SiteLink><SiteLink href="/#apply">Let’s talk</SiteLink></nav><p>Los Angeles · Orange County · Ventura County</p><span>© {new Date().getFullYear()} Vantage</span></footer>
+    <SiteLink className="floating-apply" href="/#apply">Let’s talk <ArrowUpRight size={17} aria-hidden="true" /></SiteLink>
+    <footer className="site-footer site-footer-expanded"><SiteLink className="wordmark" href="/">vantage<span>.</span></SiteLink><nav className="footer-links" aria-label="Footer navigation"><SiteLink href="/about/">About</SiteLink><SiteLink href="/services/">What I do</SiteLink><SiteLink href="/blog/">Field Notes</SiteLink><SiteLink href="/privacy/">Privacy</SiteLink><SiteLink href="/#apply">Let’s talk</SiteLink></nav><p>Los Angeles · Orange County · Ventura County</p><span>© {new Date().getFullYear()} Vantage</span></footer>
   </>;
 }

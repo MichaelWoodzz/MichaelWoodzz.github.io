@@ -40,7 +40,7 @@ await writeFile(
   `User-agent: *\nAllow: /\n\nUser-agent: OAI-SearchBot\nAllow: /\n\nUser-agent: ChatGPT-User\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\n\nUser-agent: ClaudeBot\nAllow: /\n\nUser-agent: PerplexityBot\nAllow: /\n\nSitemap: ${siteUrl}/sitemap.xml\nHost: ${siteUrl}\n`,
 );
 const sitemapEntries = pages.map(([path, priority]) => {
-  const image = path === '/' ? `\n    <image:image>\n      <image:loc>${siteUrl}/vantage-coastal-hero.webp</image:loc>\n    </image:image>` : '';
+  const image = path === '/' ? `\n    <image:image>\n      <image:loc>${siteUrl}/vantage-social-hero.webp</image:loc>\n    </image:image>` : '';
   return `  <url>\n    <loc>${siteUrl}${path}</loc>\n    <lastmod>${lastModified}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>${priority}</priority>${image}\n  </url>`;
 }).join('\n');
 await writeFile(
@@ -49,7 +49,11 @@ await writeFile(
 );
 await writeFile(
   join(outputDirectory, 'llms.txt'),
-  `# Vantage\n\n> Vantage is a private dating, social, appearance, and lifestyle advisory for adult men in Southern California who want discreet, hands-on support.\n\nVantage helps clients improve appearance, confidence, dating strategy, digital presence, social circles, real-world social access, and private hosting. Clients do not need a particular career title or professional background. The service is intended for men with the means and commitment to invest seriously in their personal lives. It is not a matchmaking database, pickup course, or seller of guaranteed introductions. The working relationship is personal, discreet, and hands-on.\n\n## Service area\n\nLos Angeles County, Orange County, and Ventura County, with selective travel.\n\n## Key pages and field notes\n\n${pages.map(([path]) => `- ${siteUrl}${path}`).join('\n')}\n\n## Contact\n\nPrivate client applications: ${siteUrl}/#apply\nEmail: michael@vantagesocal.com\n`,
+  `# Vantage\n\n> Vantage is a private image and social concierge for adult men in Southern California. Image. Connections. Experiences.
+
+Vantage rebrands clients’ image, connects them with the right people, and hosts events and nights out. The service includes appearance specialists, hair, skin, physique, wardrobe, photos, digital presence, personal social planning, outings together, introductions when appropriate, private dinners, and parties. Clients do not need a particular career title. It is intended for men with the means and commitment to invest in their personal lives. The relationship is personal, discreet, and hands-on. It is not a catalog of matches and does not guarantee specific introductions or romantic outcomes. Instagram: https://www.instagram.com/vantagesocal/
+
+## Service area\n\nLos Angeles County, Orange County, and Ventura County, with selective travel.\n\n## Key pages and field notes\n\n${pages.map(([path]) => `- ${siteUrl}${path}`).join('\n')}\n\n## Contact\n\nPrivate client applications: ${siteUrl}/#apply\nEmail: michael@vantagesocal.com\n`,
 );
 const feedItems = blogPosts.map(([slug, title, description]) => `    <item>\n      <title>${title}</title>\n      <link>${siteUrl}/blog/${slug}/</link>\n      <guid>${siteUrl}/blog/${slug}/</guid>\n      <pubDate>Fri, 11 Sep 2026 12:00:00 GMT</pubDate>\n      <description>${description}</description>\n    </item>`).join('\n');
 await writeFile(

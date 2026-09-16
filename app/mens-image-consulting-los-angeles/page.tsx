@@ -2,35 +2,67 @@ import type { Metadata } from 'next';
 import { AdvisoryDetailPage } from '@/components/AdvisoryDetailPage';
 
 export const dynamic = 'force-static';
-
 export const metadata: Metadata = {
-  title: 'Men’s Image and Appearance Consulting in Los Angeles | Vantage',
-  description: 'Private appearance consulting for men across Los Angeles, Orange County, and Ventura County: physique, hair, skin, grooming, wardrobe, photography, and presentation.',
-  alternates: { canonical: '/mens-image-consulting-los-angeles/' },
-  openGraph: { title: 'Men’s Image and Appearance Consulting | Vantage', description: 'A coordinated plan for physique, grooming, style, photography, and personal presentation.', url: '/mens-image-consulting-los-angeles/' },
+  "title": "Personal Rebranding & Men’s Image in Los Angeles | Vantage",
+  "description": "Hair. Skin. Physique. Style. Photos. I bring the details together and connect the specialists who can help you look your best.",
+  "alternates": {
+    "canonical": "/mens-image-consulting-los-angeles/"
+  },
+  "openGraph": {
+    "title": "Personal Rebranding & Men’s Image in Los Angeles | Vantage",
+    "description": "Hair. Skin. Physique. Style. Photos. I bring the details together and connect the specialists who can help you look your best.",
+    "url": "/mens-image-consulting-los-angeles/"
+  }
 };
 
-export default function Page() {
-  return <AdvisoryDetailPage
-    path="/mens-image-consulting-los-angeles/"
-    eyebrow="Appearance advisory for men"
-    title="Look your absolute best—without becoming someone else."
-    lead="Vantage coordinates the details that shape a first impression: physique, hair, skincare, grooming, wardrobe, photography, and the way you carry yourself."
-    serviceType="Men's image and appearance consulting"
-    sections={[
-      { title: 'One coordinated appearance plan', paragraphs: ['Most men address appearance one piece at a time. A new haircut, a few shirts, or a gym program can help, but the strongest result comes when every decision supports the same direction.', 'We identify the changes with the greatest impact and sequence them around your schedule, budget, and goals.'], points: ['Physique and fitness direction', 'Hair, grooming, and skincare', 'Wardrobe and personal style', 'Photography and dating-profile presentation'] },
-      { title: 'Access to the right specialists', paragraphs: ['Vantage can tap a Southern California network of trusted specialists rather than asking you to search blindly. Depending on the plan, that may include trainers, barbers, hairstylists, skincare professionals, photographers, and wardrobe resources.', 'Recommendations are based on fit. You only pursue the services that make sense for you.'] },
-      { title: 'Designed for real life', paragraphs: ['The goal is to look sharper in the places you actually go—work, dates, dinners, events, weekends, and photographs. The plan should feel natural enough to maintain and strong enough to change how you are perceived.'] },
-    ]}
-    questions={[
-      { question: 'Do I need to change everything?', answer: 'No. The first step is identifying what will create the greatest improvement. Some clients need a few focused changes; others benefit from a complete reset.' },
-      { question: 'Do you provide the cosmetic services directly?', answer: 'Vantage advises, prioritizes, and coordinates. Specialized services are performed by appropriate independent professionals in the network.' },
-      { question: 'Is appearance work only for dating?', answer: 'No. Better presentation can improve confidence and presence across professional, social, and dating environments.' },
-    ]}
-    related={[
-      { href: '/private-dating-advisor-los-angeles/', label: 'Private dating advisory' },
-      { href: '/social-life-consulting-los-angeles/', label: 'Social life consulting' },
-      { href: '/how-it-works/', label: 'How Vantage works' },
-    ]}
-  />;
-}
+const content = {
+  "path": "/mens-image-consulting-los-angeles/",
+  "eyebrow": "Your personal rebrand",
+  "title": "Look like the man you want to be.",
+  "lead": "Hair. Skin. Physique. Style. Photos. I bring the details together and connect the specialists who can help you look your best.",
+  "serviceType": "Private image and social concierge",
+  "sections": [
+    {
+      "title": "Start with the biggest wins",
+      "paragraphs": [
+        "We look at what is working and what could be sharper. A few focused changes can make a difference; some men want a complete reset.",
+        "The direction fits your features, personality, lifestyle, and the impression you want to make."
+      ]
+    },
+    {
+      "title": "Bring in the right experts",
+      "paragraphs": [
+        "My network includes resources across hair, grooming, skincare, cosmetics, fitness, wardrobe, and photography. I help choose the right fit and coordinate the plan.",
+        "Specialist treatments and services are assessed and delivered by the appropriate independent professionals."
+      ]
+    },
+    {
+      "title": "Make the image work everywhere",
+      "paragraphs": [
+        "You should look good at dinner, on a date, at a party, and in your photos. We build a consistent presentation you can maintain in real life."
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "question": "Do I have to change everything?",
+      "answer": "No. We prioritize the improvements with the biggest impact for you."
+    },
+    {
+      "question": "Can you help with photos and online presence?",
+      "answer": "Yes. Photography, dating profiles, and Instagram can be part of the personal rebrand."
+    }
+  ],
+  "related": [
+    {
+      "href": "/social-life-consulting-los-angeles/",
+      "label": "Connections & social life"
+    },
+    {
+      "href": "/private-events-los-angeles/",
+      "label": "Private dinners & parties"
+    }
+  ]
+};
+
+export default function Page() { return <AdvisoryDetailPage {...content} />; }

@@ -17,7 +17,7 @@ export default function PrivacyPage() {
       <SiteLink className="skip-link" href="#main">Skip to content</SiteLink>
       <header className="site-header detail-header">
         <SiteLink className="wordmark" href="/" aria-label="Vantage home">vantage<span>.</span></SiteLink>
-        <nav aria-label="Main navigation"><SiteLink href="/about/">About</SiteLink><SiteLink href="/services/">Services</SiteLink><SiteLink href="/blog/">Field Notes</SiteLink><SiteLink href="/#apply">Let’s talk <ArrowUpRight size={15} aria-hidden="true" /></SiteLink></nav>
+        <nav aria-label="Main navigation"><SiteLink href="/about/">About</SiteLink><SiteLink href="/services/">What I do</SiteLink><SiteLink href="/blog/">Field Notes</SiteLink><SiteLink href="/#apply">Let’s talk <ArrowUpRight size={15} aria-hidden="true" /></SiteLink></nav>
       </header>
       <main id="main" className="detail-page policy-page">
         <section className="detail-hero policy-hero">

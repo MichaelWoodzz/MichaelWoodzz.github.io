@@ -22,9 +22,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return pages.map(({ path, priority }) => ({
     url: `${siteUrl}${path}`,
-    lastModified: new Date('2026-09-11'),
+    lastModified: new Date('2026-09-16'),
     changeFrequency: 'monthly' as const,
     priority,
-    ...(path === '/' ? { images: [`${siteUrl}/vantage-coastal-hero.webp`] } : {}),
+    ...(path === '/' ? { images: [`${siteUrl}/vantage-social-hero.webp`] } : {}),
   }));
 }

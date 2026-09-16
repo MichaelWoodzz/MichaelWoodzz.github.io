@@ -5,7 +5,7 @@ export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: 'Dating Coach vs Matchmaker in Los Angeles | Vantage',
-  description: 'Compare a dating coach, matchmaker, and Vantage private advisory for men in Los Angeles. See which kind of help fits your dating and social life.',
+  description: 'Compare a dating coach, matchmaker, and Vantage social concierge for men in Los Angeles. See which kind of help fits your dating and social life.',
   alternates: { canonical: '/dating-coach-vs-matchmaker-los-angeles/' },
   openGraph: {
     title: 'Dating Coach vs Matchmaker in Los Angeles | Vantage',
@@ -18,7 +18,7 @@ export default function Page() {
   return <AdvisoryDetailPage
     path="/dating-coach-vs-matchmaker-los-angeles/"
     eyebrow="Choosing the right help"
-    title="Dating coach, matchmaker, or private wingman?"
+    title="Dating coach, matchmaker, or social concierge?"
     lead="The right choice depends on the real problem. Vantage is built for men who need more than advice or introductions: they want a trusted person helping improve the whole system around their personal life."
     serviceType="Private dating and social advisory for men"
     sections={[
@@ -34,7 +34,7 @@ export default function Page() {
       },
       {
         title: 'When Vantage is the better fit',
-        paragraphs: ['Vantage is for the man who wants one private advisor to look at everything: physique, hair, skin, style, photos, apps, confidence, friends, venues, outings, hosting, and the people he wants around him.', 'I can help make the plan, connect you with excellent specialists, go out with you, organize dinners and parties, and use a broad Southern California network when a connection fits naturally. The relationship feels closer to a capable, well-connected friend than a conventional service.'],
+        paragraphs: ['Vantage is for the man who wants one well-connected person to look at everything: physique, hair, skin, style, photos, apps, confidence, friends, venues, outings, hosting, and the people he wants around him.', 'I can help make the plan, connect you with excellent specialists, go out with you, organize dinners and parties, and use a broad Southern California network when a connection fits naturally. The relationship feels closer to a capable, well-connected friend than a conventional service.'],
         points: ['Appearance and expert network', 'Dating strategy and digital presence', 'Social circle and weekly lifestyle', 'In-person outings, events, and hosting'],
       },
       {
@@ -43,14 +43,14 @@ export default function Page() {
       },
     ]}
     questions={[
-      { question: 'Is Vantage a dating coach?', answer: 'Vantage can provide dating coaching, but the service is broader. It can also coordinate appearance specialists, improve your social circle, join you on outings, and create private events.' },
+      { question: 'Is Vantage a dating coach?', answer: 'Vantage is a private image and social concierge. I help rebrand your image, build your circle, go out with you, and host private events. Personal dating guidance can be part of that wider work.' },
       { question: 'Is Vantage a matchmaker?', answer: 'No. Vantage does not sell matches from a database. Natural introductions may happen through the network when the fit and circumstances are appropriate.' },
       { question: 'Who is Vantage best for?', answer: 'Vantage is best for adult men with the means and commitment to invest in their appearance, confidence, dating life, friendships, and social calendar. Career status is not the test.' },
       { question: 'Where is the service available?', answer: 'Vantage serves Los Angeles County, Orange County, and Ventura County, with selective travel considered separately.' },
     ]}
     related={[
-      { href: '/private-dating-advisor-los-angeles/', label: 'Private dating advisory for men' },
-      { href: '/private-wingman-los-angeles/', label: 'Private wingman support' },
+      { href: '/private-dating-advisor-los-angeles/', label: 'Dating & real-world connections' },
+      { href: '/private-wingman-los-angeles/', label: 'Nights out together' },
       { href: '/how-it-works/', label: 'How Vantage works' },
     ]}
   />;

@@ -36,7 +36,7 @@ export function AnalyticsConsent({ measurementId }: { measurementId: string }) {
     const onClick = (event: MouseEvent) => {
       const target = event.target instanceof Element ? event.target.closest('a') : null;
       if (!target) return;
-      const placement = target.classList.contains('floating-apply') ? 'floating' : target.closest('.hero') ? 'hero' : 'navigation';
+      const placement = target.classList.contains('floating-apply') ? 'floating' : target.closest('.hero, .brand-hero') ? 'hero' : 'navigation';
       tracker.trackSection(target.getAttribute('href'), placement);
     };
     const onSubmit = (event: Event) => {

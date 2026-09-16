@@ -82,7 +82,7 @@ export function AdvisoryDetailPage({
       <SiteLink className="skip-link" href="#main">Skip to content</SiteLink>
       <header className="site-header detail-header">
         <SiteLink className="wordmark" href="/" aria-label="Vantage home">vantage<span>.</span></SiteLink>
-        <nav aria-label="Main navigation"><SiteLink href="/about/">About</SiteLink><SiteLink href="/services/">Services</SiteLink><SiteLink href="/blog/">Field Notes</SiteLink><SiteLink href="/#apply">Let’s talk <ArrowUpRight size={15} aria-hidden="true" /></SiteLink></nav>
+        <nav aria-label="Main navigation"><SiteLink href="/about/">About</SiteLink><SiteLink href="/services/">What I do</SiteLink><SiteLink href="/blog/">Field Notes</SiteLink><SiteLink href="/#apply">Let’s talk <ArrowUpRight size={15} aria-hidden="true" /></SiteLink></nav>
       </header>
 
       <main id="main" className="detail-page">
@@ -92,7 +92,7 @@ export function AdvisoryDetailPage({
             <p className="eyebrow">{eyebrow}</p>
             <h1>{title}</h1>
             <p className="detail-lead">{lead}</p>
-            <SiteLink className="primary-link" href="/#apply">Get Vantage in your corner <ArrowUpRight size={18} aria-hidden="true" /></SiteLink>
+            <SiteLink className="primary-link" href="/#apply">Let’s make it happen <ArrowUpRight size={18} aria-hidden="true" /></SiteLink>
           </div>
         </section>
 
@@ -118,14 +118,14 @@ export function AdvisoryDetailPage({
 
           <section className="related-pages" aria-labelledby="related-title">
             <p className="eyebrow">Explore Vantage</p>
-            <h2 id="related-title">Related private advisory services</h2>
+            <h2 id="related-title">More of what I do</h2>
             <div>{related.map((item) => <SiteLink key={item.href} href={item.href}>{item.label}<ArrowUpRight size={15} aria-hidden="true" /></SiteLink>)}</div>
           </section>
         </div>
       </main>
 
-      <SiteLink className="floating-apply" href="/#apply">Get a wingman <ArrowUpRight size={17} aria-hidden="true" /></SiteLink>
-      <footer className="site-footer site-footer-expanded"><SiteLink className="wordmark" href="/" aria-label="Vantage home">vantage<span>.</span></SiteLink><nav className="footer-links" aria-label="Footer navigation"><SiteLink href="/about/">About</SiteLink><SiteLink href="/services/">Services</SiteLink><SiteLink href="/blog/">Field Notes</SiteLink><SiteLink href="/how-it-works/">How it works</SiteLink><SiteLink href="/southern-california-service-area/">Where I work</SiteLink><SiteLink href="/privacy/">Privacy</SiteLink><SiteLink href="/#apply">Let’s talk</SiteLink></nav><p>Los Angeles · Orange County · Ventura County</p><span>© {new Date().getFullYear()} Vantage</span></footer>
+      <SiteLink className="floating-apply" href="/#apply">Let’s talk <ArrowUpRight size={17} aria-hidden="true" /></SiteLink>
+      <footer className="site-footer site-footer-expanded"><SiteLink className="wordmark" href="/" aria-label="Vantage home">vantage<span>.</span></SiteLink><nav className="footer-links" aria-label="Footer navigation"><SiteLink href="/about/">About</SiteLink><SiteLink href="/services/">What I do</SiteLink><SiteLink href="/blog/">Field Notes</SiteLink><SiteLink href="/how-it-works/">How it works</SiteLink><SiteLink href="/southern-california-service-area/">Where I work</SiteLink><SiteLink href="/privacy/">Privacy</SiteLink><SiteLink href="/#apply">Let’s talk</SiteLink></nav><p>Los Angeles · Orange County · Ventura County</p><span>© {new Date().getFullYear()} Vantage</span></footer>
     </>
   );
 }

@@ -2,36 +2,71 @@ import type { Metadata } from 'next';
 import { AdvisoryDetailPage } from '@/components/AdvisoryDetailPage';
 
 export const dynamic = 'force-static';
-
 export const metadata: Metadata = {
-  title: 'Private Dating Advisor for Men in Los Angeles | Vantage',
-  description: 'A private dating advisor and hands-on dating coach for men in Los Angeles. Improve confidence, profiles, conversation, social life, and real-world opportunities.',
-  alternates: { canonical: '/private-dating-advisor-los-angeles/' },
-  openGraph: { title: 'Private Dating Advisor for Men in Los Angeles | Vantage', description: 'Personal dating strategy and hands-on support for men across Los Angeles and Southern California.', url: '/private-dating-advisor-los-angeles/' },
+  "title": "Meet Women Through a Better Social Life in LA | Vantage",
+  "description": "A sharper image, the right environments, and a well-connected friend making plans with you. Vantage helps create more natural opportunities to connect.",
+  "alternates": {
+    "canonical": "/private-dating-advisor-los-angeles/"
+  },
+  "openGraph": {
+    "title": "Meet Women Through a Better Social Life in LA | Vantage",
+    "description": "A sharper image, the right environments, and a well-connected friend making plans with you. Vantage helps create more natural opportunities to connect.",
+    "url": "/private-dating-advisor-los-angeles/"
+  }
 };
 
-export default function Page() {
-  return <AdvisoryDetailPage
-    path="/private-dating-advisor-los-angeles/"
-    eyebrow="Private dating advisory"
-    title="Private dating advice built around your actual life."
-    lead="Vantage is a private dating advisor and hands-on dating coach for men who want to improve confidence, conversation, profiles, photos, social opportunities, and the choices that shape each experience."
-    serviceType="Private dating advisory for men"
-    sections={[
-      { title: 'A personal dating strategy', paragraphs: ['There is no script or fixed course. We look at your experience, personality, schedule, goals, current opportunities, and the kind of relationship or dating life you want.', 'The result is a practical strategy for meeting people, presenting yourself well, communicating naturally, and making better decisions throughout the dating process.'], points: ['Confidence and social comfort', 'Conversation and flirting', 'Dating choices and follow-through', 'Dating apps, prompts, photos, and messaging'] },
-      { title: 'Dating is connected to the rest of your life', paragraphs: ['A profile cannot compensate for weak photos, an empty calendar, or a lifestyle that creates few opportunities to meet people. Vantage can address appearance, social life, digital presence, and real-world access together.', 'That broader view is what separates private advisory from ordinary dating coaching.'] },
-      { title: 'Local and hands-on', paragraphs: ['Los Angeles dating is shaped by geography, schedules, neighborhoods, and social circles. We build around those realities instead of giving generic advice.', 'When useful, support can extend into outings, introductions, event planning, and feedback based on what is happening in real life.'] },
-    ]}
-    questions={[
-      { question: 'Is Vantage a matchmaking service?', answer: 'No. Vantage does not sell matches or arrange dates from a database. The work improves your presentation, confidence, social life, and access so connections can develop naturally.' },
-      { question: 'Can you help with dating apps?', answer: 'Yes. Support can include photo selection, profile strategy, prompts, messaging, and deciding how apps should fit into a broader dating plan.' },
-      { question: 'Do you guarantee dates or relationships?', answer: 'No. Attraction and relationships involve other people. Vantage provides strategy, honest feedback, coordination, and practical support without promising a specific romantic outcome.' },
-      { question: 'Do I need a certain career or professional title?', answer: 'No. Vantage works with men who have the means and commitment to invest in their appearance, confidence, dating life, friendships, and social calendar. Career status is not the qualification.' },
-    ]}
-    related={[
-      { href: '/private-wingman-los-angeles/', label: 'Private wingman support' },
-      { href: '/mens-image-consulting-los-angeles/', label: 'Men’s image consulting' },
-      { href: '/social-life-consulting-los-angeles/', label: 'Social life consulting' },
-    ]}
-  />;
-}
+const content = {
+  "path": "/private-dating-advisor-los-angeles/",
+  "eyebrow": "Your dating life, in real life",
+  "title": "Meet women you are excited about.",
+  "lead": "A sharper image, the right environments, and a well-connected friend making plans with you. Vantage helps create more natural opportunities to connect.",
+  "serviceType": "Private image and social concierge",
+  "sections": [
+    {
+      "title": "Build around your type",
+      "paragraphs": [
+        "Tell me about the women you want to meet: their age, interests, values, lifestyle, and the kind of connection you want.",
+        "We use that to shape your presentation, the places we go, and the social experiences we create."
+      ]
+    },
+    {
+      "title": "Get the whole picture working",
+      "paragraphs": [
+        "Your look, photos, digital presence, confidence, and social calendar all shape who you meet. I help bring those pieces together.",
+        "That can include grooming and style specialists, new photography, profile work, and a more active life outside the apps."
+      ]
+    },
+    {
+      "title": "Have someone beside you",
+      "paragraphs": [
+        "I can go out with you, help with introductions, and bring my network into the experience when the fit is natural. Private dinners and parties can be part of the plan too."
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "question": "Do you arrange matches?",
+      "answer": "There is no catalog of women or managed dating pipeline. Connections develop through the social life we build together."
+    },
+    {
+      "question": "Can you promise a specific woman or relationship?",
+      "answer": "No. We create opportunities and improve how you show up. Attraction and relationships depend on mutual interest."
+    }
+  ],
+  "related": [
+    {
+      "href": "/mens-image-consulting-los-angeles/",
+      "label": "Image & personal rebranding"
+    },
+    {
+      "href": "/social-life-consulting-los-angeles/",
+      "label": "Connections & social life"
+    },
+    {
+      "href": "/private-events-los-angeles/",
+      "label": "Private dinners & parties"
+    }
+  ]
+};
+
+export default function Page() { return <AdvisoryDetailPage {...content} />; }

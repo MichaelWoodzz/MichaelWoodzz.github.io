@@ -6,10 +6,10 @@ import { ArrowUpRight } from 'lucide-react';
 
 const SERVICE_OPTIONS = [
   'Appearance, grooming, fitness, or style',
-  'Dating confidence and social skills',
+  'Dating life and meeting women',
   'Dating apps, photos, and online presence',
   'A stronger social circle and lifestyle',
-  'Going out together and real-time support',
+  'Nights out together',
   'Private dinners, parties, and events',
   'Introductions and access to better environments',
   'I am not sure yet',
@@ -110,7 +110,7 @@ export function InquiryForm() {
     ].join('\n\n');
 
     window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
-      `Private advisory application from ${data.name}`,
+      `Private Vantage inquiry from ${data.name}`,
     )}&body=${encodeURIComponent(emailBody)}`;
   };
 
@@ -118,7 +118,7 @@ export function InquiryForm() {
     <form className="inquiry inquiry-full" onSubmit={handleSubmit}>
       <div className="inquiry-heading">
         <p className="inquiry-kicker">Just between us</p>
-        <h3>Give me the honest version.</h3>
+        <h3>Let’s start with you.</h3>
         <p>I read every message myself. Your answers stay private.</p>
       </div>
 
@@ -183,7 +183,7 @@ export function InquiryForm() {
         <button className="primary-link inquiry-submit" type="submit">
           Send it to me <ArrowUpRight size={18} aria-hidden="true" />
         </button>
-        <p className="inquiry-hint">This opens your email app with your confidential application ready to send.</p>
+        <p className="inquiry-hint">This opens your email app with your private inquiry ready to send.</p>
       </div>}
       <p className="inquiry-email-fallback">Want to skip the form? Email me directly at <a href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Private Vantage inquiry')}`}>{CONTACT_EMAIL}</a></p>
     </form>
