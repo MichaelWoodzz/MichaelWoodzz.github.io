@@ -6,6 +6,7 @@ import { publicAsset, siteUrl } from '@/lib/site-config';
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  verification: { google: 'rVSQyyxyh5ewqQRwoQjjJR1kuu2WVxePhabh_lXBUqA' },
   title: 'Vantage | Image, Connections & Social Life in LA',
   description: 'Let me build your social life in LA. Private image and social concierge for men: personal rebranding, connections, nights out, dinners, and parties.',
   applicationName: 'Vantage',
